@@ -1,0 +1,29 @@
+THIRD-PARTY-NOTICES
+
+Arashtad 3D Annotation includes the following third-party software:
+
+1. Babylon.js
+
+Babylon.js is included in this plugin under the Apache License 2.0.
+
+Copyright (c) Microsoft Corporation and Babylon.js contributors.
+
+License:
+Apache License 2.0
+
+The Apache License 2.0 permits use, reproduction, modification, and distribution subject to its terms. The applicable license text is included with this plugin in licenses/APACHE-2.0.txt.
+
+Project:
+https://github.com/BabylonJS/Babylon.js
+
+
+2. Arashtad 3D Runtime
+
+Arashtad 3D Runtime is developed by Arashtad and is included in this plugin under the MIT License.
+
+Copyright (c) 2026 Arashtad.
+
+License:
+MIT License
+
+The applicable license text is included with this plugin in licenses/MIT.txt.

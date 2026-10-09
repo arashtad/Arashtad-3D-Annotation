@@ -1,0 +1,1038 @@
+@import 'admin.scss';
+
+// Pro features page
+.arashtad-pro-features {
+  background: $arashtad-bg;
+  color: $arashtad-text;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  padding: 40px 0 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+  .arashtad-pro-hero-visual {
+    .arashtad-3d-logo {
+        width: 345px;
+        max-width: 100%;
+        height: 345px;
+    }
+  }
+
+  // Shared utilities
+  .arashtad-pro-eyebrow {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: $arashtad-primary;
+    margin-bottom: 8px;
+  }
+
+  .arashtad-pro-badge {
+    display: inline-block;
+    background: $arashtad-primary;
+    color: $arashtad-bg-deep;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 12px;
+    border-radius: $arashtad-radius-small;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  h1, h2, h3 {
+    color: $arashtad-white;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 12px;
+  }
+
+  h1 { font-size: 42px; }
+  h2 { font-size: 30px; }
+  h3 { font-size: 20px; }
+
+  p {
+    color: $arashtad-text-muted;
+    margin: 0 0 16px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      position: relative;
+      padding: 0 0 0 22px;
+      color: $arashtad-text-muted;
+      font-size: 14px;
+      
+      &::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: $arashtad-primary;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .button-primary {
+    background: $arashtad-primary;
+    border: none;
+    border-radius: $arashtad-radius;
+    color: $arashtad-bg-deep;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 32px;
+    height: auto;
+    line-height: 1.4;
+    transition: background $arashtad-transition, 
+                transform $arashtad-transition,
+                box-shadow $arashtad-transition;
+    box-shadow: 0 4px 16px rgba($arashtad-primary, 0.25);
+    
+    &:hover {
+      background: $arashtad-primary-light;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba($arashtad-primary, 0.35);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  // Hreo
+  .arashtad-pro-hero {
+    @include arashtad-container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid $arashtad-border;
+
+    &-content {
+      h1 {
+        font-size: 46px;
+        margin-bottom: 16px;
+        
+        @media (max-width: 768px) {
+          font-size: 32px;
+        }
+      }
+      
+      .arashtad-pro-hero-lead {
+        font-size: 18px;
+        color: $arashtad-white;
+        margin-bottom: 8px;
+      }
+      
+      .arashtad-pro-hero-description {
+        font-size: 15px;
+        margin-bottom: 28px;
+      }
+    }
+
+    &-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      min-height: 200px;
+
+      .arashtad-pro-orbit {
+        position: absolute;
+        border: 1px solid rgba($arashtad-primary, 0.15);
+        border-radius: 50%;
+        animation: arashtad-spin 20s linear infinite;
+        
+        &-1 {
+          width: 160px;
+          height: 160px;
+          animation-duration: 25s;
+        }
+        
+        &-2 {
+          width: 200px;
+          height: 200px;
+          animation-duration: 30s;
+          animation-direction: reverse;
+        }
+      }
+
+      .arashtad-pro-model {
+        width: 80px;
+        height: 80px;
+        background: $arashtad-bg-light;
+        border: 1px solid $arashtad-primary;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        font-weight: 700;
+        color: $arashtad-primary;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 0 40px rgba($arashtad-primary, 0.1);
+      }
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding-bottom: 40px;
+
+      .arashtad-pro-hero-visual {
+        min-height: 150px;
+        order: -1;
+      }
+    }
+  }
+
+  @keyframes arashtad-spin {
+    to { transform: rotate(360deg); }
+  }
+
+  // Section Heading
+  .arashtad-pro-section-heading {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 48px;
+    
+    h2 { margin-bottom: 8px; }
+    p { margin-bottom: 0; }
+  }
+
+  // Progression Steps
+  .arashtad-pro-progression {
+    @include arashtad-container;
+    padding: 60px 24px;
+
+    .arashtad-pro-steps {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+      text-align: center;
+    }
+
+    .arashtad-pro-step {
+      @include arashtad-card-hover;
+      background: $arashtad-bg-light;
+      border: 1px solid $arashtad-border;
+      border-radius: $arashtad-radius;
+      padding: 20px 12px;
+      
+      .arashtad-pro-step-number {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        color: $arashtad-primary;
+        margin-bottom: 6px;
+      }
+      
+      strong {
+        display: block;
+        color: $arashtad-white;
+        font-size: 14px;
+        margin-bottom: 2px;
+      }
+      
+      span {
+        display: block;
+        color: $arashtad-text-muted;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .arashtad-pro-steps {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .arashtad-pro-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  // Feature Sections
+  .arashtad-pro-feature {
+    @include arashtad-container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    padding: 60px 24px;
+    border-top: 1px solid $arashtad-border;
+
+    &-large {
+      gap: 64px;
+    }
+
+    &-reverse {
+      direction: rtl;
+      
+      > * { direction: ltr; }
+    }
+
+    &-content {
+      h2 { font-size: 28px; }
+    }
+
+    &-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 180px;
+    }
+
+    .arashtad-pro-feature-icon {
+      display: inline-block;
+      background: $arashtad-bg-light;
+      border: 1px solid $arashtad-primary;
+      border-radius: $arashtad-radius-small;
+      color: $arashtad-primary;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 12px;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    // Visual grid
+    .arashtad-pro-visual-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      
+      span {
+        background: $arashtad-bg-light;
+        border: 1px solid $arashtad-border;
+        border-radius: $arashtad-radius;
+        padding: 20px 8px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 14px;
+        color: $arashtad-text-muted;
+        transition: all $arashtad-transition;
+        
+        &:hover {
+          border-color: $arashtad-primary;
+          color: $arashtad-white;
+          background: $arashtad-bg-hover;
+        }
+      }
+    }
+
+    // Scene visual
+    .arashtad-pro-scene-visual {
+      flex-direction: column;
+      gap: 8px;
+      padding: 20px;
+
+      .arashtad-pro-scene-node {
+        background: $arashtad-bg-light;
+        border: 1px solid $arashtad-border;
+        border-radius: $arashtad-radius;
+        padding: 12px 24px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: $arashtad-text-muted;
+        transition: all $arashtad-transition;
+        
+        &:hover {
+          border-color: $arashtad-primary;
+          color: $arashtad-white;
+        }
+      }
+
+      .arashtad-pro-scene-line {
+        width: 2px;
+        height: 16px;
+        background: $arashtad-border;
+      }
+    }
+
+    // Loader visual
+    .arashtad-pro-loader-visual {
+      text-align: center;
+      
+      .arashtad-pro-loader-ring {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 12px;
+        border: 3px solid $arashtad-border;
+        border-top-color: $arashtad-primary;
+        border-radius: 50%;
+        animation: arashtad-spin 1s linear infinite;
+      }
+      
+      strong {
+        display: block;
+        font-size: 24px;
+        color: $arashtad-white;
+      }
+      
+      span {
+        color: $arashtad-text-muted;
+        font-size: 13px;
+      }
+    }
+
+    // Mesh visual
+    .arashtad-pro-mesh-visual {
+      .arashtad-pro-mesh {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        width: 160px;
+        
+        .arashtad-pro-mesh-part {
+          background: $arashtad-bg-light;
+          border: 1px solid $arashtad-border;
+          border-radius: $arashtad-radius-small;
+          padding: 16px 8px;
+          text-align: center;
+          font-size: 9px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+          color: $arashtad-text-muted;
+          transition: all $arashtad-transition;
+          
+          &:hover {
+            border-color: $arashtad-primary;
+            color: $arashtad-white;
+            background: $arashtad-bg-hover;
+          }
+        }
+        
+        .mesh-head { grid-column: 1 / -1; }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+        .ar-web-wapper {
+            min-height: 300px;
+        }
+    }
+
+    .ar-web {
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba($arashtad-secondary, 50%);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba($arashtad-primary, 10%);
+            animation: blink 3s .3s ease-out infinite;
+        }
+
+        li {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 2px dotted $arashtad-secondary;
+            background: $arashtad-bg-active;
+            color: $arashtad-3d-annotation-light;
+            text-align: center;
+            line-height: 80px;
+            user-select: none;
+
+            &::after {
+              content: '';
+              position: absolute;
+              z-index: 0;
+              top: 50%;
+              left: 50%;
+              width: 10px;
+              height: 10px;
+              transform: translate(-50%, -50%);
+              border-radius: 50%;
+              background: $arashtad-primary;
+              opacity: .3;
+              animation: expand 6s infinite;
+            }
+
+            &:nth-child(n+1) {
+                top: -110px;
+                left: -130px;
+                transform: scale(1.1);
+                animation: radiant 3s .3s ease-out infinite;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 54px;
+                    left: 90px;
+                    width: 1px;
+                    height: 54px;
+                    transform: rotate(-53deg);
+                    border-left: 1px dotted $arashtad-primary;
+                }
+
+                &::after {
+                  animation-delay: .3s;
+                }
+            }
+            &:nth-child(n+2) {
+                top: -40px;
+                left: 70px;
+                transform: scale(1.2);
+                animation: radiant 3s .6s ease-out infinite;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 17px;
+                    left: -24px;
+                    width: 1px;
+                    height: 44px;
+                    transform: rotate(-88deg);
+                    border-left: 1px dotted $arashtad-primary;
+                }
+
+                &::after {
+                  animation-delay: .6s;
+                }
+            }
+            &:nth-child(n+3) {
+                top: 40px;
+                left: -80px;
+                transform: scale(.8);
+                animation: radiant 3s .9s ease-out infinite;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -55px;
+                    left: 70px;
+                    width: 1px;
+                    height: 62px;
+                    transform: rotate(27deg);
+                    border-left: 1px dotted $arashtad-primary;
+                }
+
+                &::after {
+                  animation-delay: .9s;
+                }
+            }
+            &:nth-child(n+4) {
+                top: 0;
+                left: -160px;
+                transform: scale(.6);
+                animation: radiant 3s 1.2s ease-out infinite;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -74px;
+                    left: 152px;
+                    width: 1px;
+                    height: 154px;
+                    transform: rotate(72deg);
+                    border-left: 1px dotted $arashtad-primary;
+                }
+
+                &::after {
+                  animation-delay: 1.2s;
+                }
+            }
+            &:nth-child(n+5) {
+                top: -140px;
+                left: -20px;
+                transform: scale(.9);
+                animation: radiant 3s 1.5s ease-out infinite;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 78px;
+                    left: 25px;
+                    width: 1px;
+                    height: 68px;
+                    transform: rotate(9deg);
+                    border-left: 1px dotted $arashtad-primary;
+                }
+
+                &::after {
+                  animation-delay: 1.5s;
+                }
+            }
+            &:nth-child(n+6) {
+                top: 50px;
+                left: 40px;
+                transform: scale(1.4);
+                animation: radiant 3s 1.8s ease-out infinite;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -26px;
+                    left: -2px;
+                    width: 1px;
+                    height: 39px;
+                    transform: rotate(-41deg);
+                    border-left: 1px dotted $arashtad-primary;
+                }
+
+                &::after {
+                  animation-delay: 1.8s;
+                }
+            }
+        }
+    }
+
+    @keyframes expand {
+      0% {
+        width: 5%;
+        height: 5%;
+        opacity: .3;
+      }
+      10% {
+        width: 10%;
+        height: 10%;
+        opacity: .5;
+      }
+      20% {
+        width: 5%;
+        height: 5%;
+        opacity: .3;
+      }
+      30% {
+        width: 10%;
+        height: 10%;
+        opacity: .5;
+      }
+      40% {
+        width: 5%;
+        height: 5%;
+        opacity: .3;
+      }
+      50% {
+        width: 10%;
+        height: 10%;
+        opacity: .5;
+      }
+      60% {
+        width: 5%;
+        height: 5%;
+        opacity: .3;
+      }
+      100% {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+    }
+
+    @keyframes blink {
+        0% {
+            background: rgba($arashtad-primary-light, 10%);
+        }
+        100% {
+            background: rgba($arashtad-primary-dark, 10%);
+        }
+    }
+
+    @keyframes radiant {
+        0% {
+            border-color: $arashtad-secondary;
+            background: $arashtad-bg-active;
+        }
+        50% {
+            border-color: rgba($arashtad-secondary, 50%);
+            background: $arashtad-bg-dark;
+        }
+        100% {
+            border-color: $arashtad-secondary;
+            background: $arashtad-bg-hover;
+        }
+    }
+
+    // Effects visual
+    .arashtad-pro-post-processing {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        background: url(../images/arashtad-3d-logo.webp) no-repeat center center;
+        background-size: contain;
+        animation: effectSequence 15s ease-in-out infinite;
+    }
+
+    @keyframes effectSequence {
+        /* Noise */
+        0%, 10% { 
+            filter: url('#noise'); 
+            opacity: 0.3;
+            background-color: transparent;
+            box-shadow: none;
+        }
+        /* Blur */
+        10%, 20% { 
+            filter: blur(5px); 
+            opacity: 1;
+            background-color: transparent;
+            box-shadow: none;
+        }
+        /* Greyscale */
+        20%, 30% { 
+            filter: grayscale(100%); 
+            opacity: 1;
+            background-color: transparent;
+            box-shadow: none;
+        }
+        /* Tint */
+        30%, 40% { 
+            filter: none; 
+            opacity: 1;
+            background-color: rgba(255, 0, 0, 0.4);
+            box-shadow: none;
+        }
+        /* Contrast */
+        40%, 50% { 
+            filter: contrast(2); 
+            opacity: 1;
+            background-color: transparent;
+            box-shadow: none;
+        }
+        /* Brightness */
+        50%, 60% { 
+            filter: brightness(1.8); 
+            opacity: 1;
+            background-color: transparent;
+            box-shadow: none;
+        }
+        /* Sepia */
+        60%, 70% { 
+            filter: sepia(100%); 
+            opacity: 1;
+            background-color: transparent;
+            box-shadow: none;
+        }
+        /* Vignette */
+        70%, 80% { 
+            filter: none; 
+            opacity: 1;
+            background-color: transparent;
+            box-shadow: inset 0 0 200px rgba(0,0,0,0.9);
+        }
+        /* Pixelate */
+        80%, 90% { 
+            filter: blur(3px); 
+            opacity: 1;
+            background-color: transparent;
+            box-shadow: none;
+            image-rendering: pixelated;
+        }
+        /* Reset */
+        90%, 100% { 
+            filter: none; 
+            opacity: 1;
+            background-color: transparent;
+            box-shadow: none;
+            image-rendering: auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 40px 24px;
+      text-align: center;
+
+      &-reverse {
+        direction: ltr;
+      }
+
+      ul li { text-align: left; }
+
+      .arashtad-pro-visual-grid {
+        max-width: 240px;
+        margin: 0 auto;
+      }
+
+      .arashtad-pro-mesh-visual .arashtad-pro-mesh {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  // Feature Grid (Lighting + Animation)
+  .arashtad-pro-feature-grid {
+    @include arashtad-container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 60px 24px;
+    border-top: 1px solid $arashtad-border;
+
+    .arashtad-pro-card {
+      @include arashtad-card-hover;
+      background: $arashtad-bg-light;
+      border: 1px solid $arashtad-border;
+      border-radius: $arashtad-radius;
+      padding: 32px;
+
+      .arashtad-pro-card-icon {
+        display: inline-block;
+        font-size: 24px;
+        margin-bottom: 12px;
+        color: $arashtad-primary;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+
+      ul li {
+        font-size: 13px;
+        padding: 4px 0 4px 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // Builder
+  .arashtad-pro-builder {
+    @include arashtad-container;
+    padding: 60px 24px;
+    border-top: 1px solid $arashtad-border;
+
+    .arashtad-pro-section-heading {
+      margin-bottom: 40px;
+    }
+
+    &-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    &-card {
+      @include arashtad-card-hover;
+      background: $arashtad-bg-light;
+      border: 1px solid $arashtad-border;
+      border-radius: $arashtad-radius;
+      padding: 32px;
+      text-align: center;
+
+      .arashtad-pro-builder-icon {
+        display: inline-block;
+        background: $arashtad-bg-deep;
+        border: 1px solid $arashtad-primary;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        line-height: 56px;
+        font-size: 18px;
+        font-weight: 700;
+        color: $arashtad-primary;
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+
+      strong {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        color: $arashtad-text-muted;
+        background: $arashtad-bg-deep;
+        padding: 4px 16px;
+        border-radius: $arashtad-radius-small;
+        letter-spacing: 0.3px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      &-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  // WooCommerce
+  .arashtad-pro-woocommerce {
+    @include arashtad-container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    padding: 60px 24px;
+    border-top: 1px solid $arashtad-border;
+    align-items: start;
+
+    &-content {
+      h2 { font-size: 28px; }
+    }
+
+    &-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+
+      div {
+        @include arashtad-card-hover;
+        background: $arashtad-bg-light;
+        border: 1px solid $arashtad-border;
+        border-radius: $arashtad-radius;
+        padding: 20px;
+        text-align: center;
+
+        strong {
+          display: block;
+          color: $arashtad-white;
+          font-size: 14px;
+          margin-bottom: 4px;
+        }
+
+        span {
+          display: block;
+          color: $arashtad-text-muted;
+          font-size: 12px;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+
+      &-features {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      &-features {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  // CTA
+  .arashtad-pro-cta {
+    text-align: center;
+    padding: 60px 24px 80px;
+    border-top: 1px solid $arashtad-border;
+    background: $arashtad-bg-dark;
+    
+    h2 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    
+    p {
+      max-width: 480px;
+      margin: 0 auto 28px;
+    }
+  }
+
+  // Footer
+  .arashtad-pro-footer {
+    text-align: center;
+    padding: 24px;
+    border-top: 1px solid $arashtad-border;
+    font-size: 13px;
+    color: $arashtad-text-muted;
+
+    strong {
+      display: block;
+      color: $arashtad-white;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.button-cta {
+  display: inline-block;
+  padding: 13px 18px;
+  border-radius: 6px;
+  background: darken(desaturate($color: $arashtad-secondary, $amount: 5%), 10%);
+  color: $arashtad-3d-annotation-light !important;
+  font-size: 130%;
+  text-decoration: none !important;
+  transition: all .3s;
+  user-select: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: darken(desaturate($color: $arashtad-secondary, $amount: 2%), 4%);
+    box-shadow: 0 0 30px rgba($arashtad-secondary, .5) !important;
+  }
+}
+
+// Responsive fixes
+@media (max-width: 480px) {
+  .arashtad-pro-features {
+    h1 { font-size: 28px !important; }
+    h2 { font-size: 22px !important; }
+    
+    .arashtad-pro-hero {
+      padding-top: 0;
+    }
+    
+    .arashtad-pro-cta {
+      padding: 40px 16px 60px;
+      
+      h2 { font-size: 26px; }
+    }
+    
+    .arashtad-pro-feature,
+    .arashtad-pro-feature-grid .arashtad-pro-card,
+    .arashtad-pro-builder-card,
+    .arashtad-pro-woocommerce-features div {
+      padding: 20px 16px;
+    }
+  }
+}

@@ -1,0 +1,2022 @@
+@charset "UTF-8";
+::selection {
+  background-color: #36403c;
+  color: #f1f4f3; }
+
+.arashtad-model-settings {
+  max-width: 1200px; }
+
+.arashtad-model-url,
+.arashtad-model-media {
+  margin-top: 15px; }
+
+.arashtad-camera-settings .form-table th {
+  width: 150px; }
+.arashtad-camera-settings .vector-inputs {
+  display: flex;
+  gap: 5px; }
+.arashtad-camera-settings .vector-inputs input {
+  text-align: center; }
+.arashtad-camera-settings .description {
+  font-style: italic;
+  color: #666;
+  margin-top: 3px; }
+.arashtad-camera-settings .camera-field {
+  transition: opacity 0.3s ease; }
+.arashtad-camera-settings .camera-field[style*="display:none"] {
+  opacity: 0; }
+
+.arashtad-3d-annotation-light-settings .vector-inputs {
+  display: flex;
+  gap: 5px; }
+.arashtad-3d-annotation-light-settings .vector-inputs input {
+  width: 33.333%;
+  text-align: center; }
+.arashtad-3d-annotation-light-settings .description {
+  font-style: italic;
+  color: #666;
+  margin-top: 3px; }
+.arashtad-3d-annotation-light-settings input[type="number"],
+.arashtad-3d-annotation-light-settings select {
+  box-sizing: border-box; }
+.arashtad-3d-annotation-light-settings p {
+  margin-bottom: 8px; }
+
+#arashtad-poster-settings {
+  display: none; }
+  #arashtad-poster-settings.enabled {
+    display: block; }
+
+#arashtad-poster-preview {
+  display: none; }
+  #arashtad-poster-preview.has-image {
+    display: block; }
+
+.arashtad-poster-preview-image {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+.arashtad-3d-logo {
+  background: url(../images/arashtad-3d-logo.webp) no-repeat center center;
+  background-size: contain; }
+
+.ar-flexbox {
+  display: flex; }
+  .ar-flexbox .flex-1 {
+    flex: 1; }
+  .ar-flexbox .flex-2 {
+    flex: 2; }
+  .ar-flexbox .flex-3 {
+    flex: 3; }
+  .ar-flexbox .flex-4 {
+    flex: 4; }
+  .ar-flexbox .flex-5 {
+    flex: 5; }
+  .ar-flexbox .flex-6 {
+    flex: 6; }
+  .ar-flexbox table {
+    align-self: flex-start; }
+    .ar-flexbox table th, .ar-flexbox table td {
+      vertical-align: top; }
+
+.ar-vertical-spacer {
+  width: 10px;
+  margin-right: 20px;
+  border-right: 1px solid #29312e; }
+
+.ar-spacer {
+  height: 10px; }
+
+.text-center {
+  text-align: center; }
+.text-left {
+  text-align: left; }
+.text-right {
+  text-align: right; }
+.text-justify {
+  text-align: justify; }
+
+.gird-background, body.arashtad-admin .postbox .inside {
+  position: relative;
+  background: #171c1a; }
+  .gird-background::before, body.arashtad-admin .postbox .inside::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(90deg, transparent 0%, transparent 99px, rgba(74, 90, 83, 0.15) 99px, rgba(74, 90, 83, 0.15) 100px), repeating-linear-gradient(0deg, transparent 0%, transparent 99px, rgba(74, 90, 83, 0.15) 99px, rgba(74, 90, 83, 0.15) 100px), repeating-linear-gradient(90deg, transparent 0%, transparent 19px, rgba(74, 90, 83, 0.06) 19px, rgba(74, 90, 83, 0.06) 20px), repeating-linear-gradient(0deg, transparent 0%, transparent 19px, rgba(74, 90, 83, 0.06) 19px, rgba(74, 90, 83, 0.06) 20px);
+    pointer-events: none;
+    z-index: 1;
+    mask-image: linear-gradient(to top left, white 0%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask-image: linear-gradient(to top left, white 0%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0) 100%); }
+  .gird-background::after, body.arashtad-admin .postbox .inside::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    aspect-ratio: 16 / 21;
+    background: url(../images/arashtad-dark-logo.svg) no-repeat right bottom;
+    background-size: contain;
+    opacity: .1; }
+
+.tv-noise {
+  position: relative;
+  overflow: hidden;
+  background: #111; }
+  .tv-noise::before {
+    content: "";
+    position: absolute;
+    inset: -50%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0 2px, transparent 2.5px), radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 1.5px, transparent 2px), radial-gradient(circle, rgba(0, 0, 0, 0.9) 0 2px, transparent 2.5px);
+    background-size: 6px 6px, 10px 10px, 8px 8px;
+    background-position: 0 0, 4px 7px, 7px 2px;
+    opacity: .75;
+    animation: tv-noise 0.06s steps(2) infinite;
+    pointer-events: none; }
+  .tv-noise::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.08) 0 2px, transparent 2px 5px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 4px);
+    mix-blend-mode: screen;
+    pointer-events: none; }
+
+@keyframes tv-noise {
+  0% {
+    transform: translate(0, 0); }
+  20% {
+    transform: translate(8%, -6%); }
+  40% {
+    transform: translate(-7%, 8%); }
+  60% {
+    transform: translate(6%, 5%); }
+  80% {
+    transform: translate(-5%, -8%); }
+  100% {
+    transform: translate(8%, 6%); } }
+@media (min-width: 1201px) {
+  .hide-in-desktop {
+    display: none; } }
+@media (max-width: 1200px) {
+  .ar-flexbox {
+    display: block; }
+
+  .ar-vertical-spacer {
+    display: none; }
+
+  .text-center-tablet {
+    text-align: center; }
+  .text-left-tablet {
+    text-align: left; }
+  .text-right-tablet {
+    text-align: right; }
+  .text-justify-tablet {
+    text-align: justify; } }
+.ar-radio-group {
+  display: flex;
+  margin: 0 auto;
+  width: 450px;
+  max-width: 100%; }
+  .ar-radio-group label {
+    flex: 1;
+    position: relative;
+    padding: 10px 14px;
+    border: 1px solid #36403c;
+    background: #0b0e0d;
+    color: #d2d8d5;
+    cursor: pointer;
+    transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+    text-align: center; }
+    .ar-radio-group label:has(input[type="radio"]:checked) {
+      background: #26a38c;
+      border-color: #26a38c;
+      color: #07100e; }
+    .ar-radio-group label:hover {
+      background: #1c2421;
+      border-color: #26a38c;
+      color: #f1f4f3; }
+    .ar-radio-group label:has(input[type="radio"]:checked):hover {
+      background: #39b69f;
+      border-color: #39b69f;
+      color: #06100d; }
+    .ar-radio-group label input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+      margin: 0;
+      pointer-events: none; }
+      .ar-radio-group label input[type="radio"]:focus, .ar-radio-group label input[type="radio"]:focus-visible {
+        outline: none;
+        box-shadow: none; }
+    .ar-radio-group label:first-child {
+      border-radius: 4px 0 0 4px; }
+    .ar-radio-group label:not(:first-child) {
+      margin-left: -1px; }
+    .ar-radio-group label:last-child {
+      border-radius: 0 4px 4px 0; }
+
+body.arashtad-admin {
+  background: #080b0a;
+  color: #d2d8d5; }
+  body.arashtad-admin #wpcontent,
+  body.arashtad-admin #wpbody-content {
+    background: #080b0a;
+    color: #d2d8d5; }
+  body.arashtad-admin #wpfooter {
+    background: #080b0a;
+    border-top: 1px solid #29312e;
+    color: #89938e; }
+    body.arashtad-admin #wpfooter a {
+      color: #26a38c; }
+      body.arashtad-admin #wpfooter a:hover {
+        color: #39b69f; }
+      body.arashtad-admin #wpfooter a:focus, body.arashtad-admin #wpfooter a:active {
+        color: #39b69f;
+        outline: none;
+        box-shadow: none; }
+  body.arashtad-admin #screen-meta {
+    border-color: #29312e; }
+    body.arashtad-admin #screen-meta #screen-options-wrap {
+      background: #080b0a;
+      color: #89938e; }
+  body.arashtad-admin #screen-meta-links .show-settings {
+    border-color: #29312e;
+    background: #080b0a;
+    color: #89938e; }
+  body.arashtad-admin #titlediv {
+    transform: scaleX(0) scaleY(1);
+    animation: arashtad-reveal-section 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards; }
+    body.arashtad-admin #titlediv #title {
+      background: #0b0e0d;
+      color: #d2d8d5; }
+  body.arashtad-admin #wp-media-modal {
+    border: 1px solid #29312e;
+    background: #080b0a;
+    color: #89938e; }
+    body.arashtad-admin #wp-media-modal .media-modal-content,
+    body.arashtad-admin #wp-media-modal .media-toolbar,
+    body.arashtad-admin #wp-media-modal .media-frame-content {
+      border-color: #29312e;
+      background: #080b0a;
+      color: #89938e; }
+    body.arashtad-admin #wp-media-modal h1, body.arashtad-admin #wp-media-modal h2, body.arashtad-admin #wp-media-modal h3, body.arashtad-admin #wp-media-modal h4, body.arashtad-admin #wp-media-modal h5, body.arashtad-admin #wp-media-modal h6 {
+      color: #d2d8d5; }
+    body.arashtad-admin #wp-media-modal .media-sidebar {
+      border-color: #29312e;
+      background: #0b0e0d; }
+      body.arashtad-admin #wp-media-modal .media-sidebar .attachment-info {
+        border-color: #29312e; }
+    body.arashtad-admin #wp-media-modal .media-frame-router .media-router .media-menu-item {
+      margin-top: -5px;
+      padding-bottom: 0;
+      border-radius: 5px 5px 0 0; }
+      body.arashtad-admin #wp-media-modal .media-frame-router .media-router .media-menu-item:active, body.arashtad-admin #wp-media-modal .media-frame-router .media-router .media-menu-item:focus, body.arashtad-admin #wp-media-modal .media-frame-router .media-router .media-menu-item.active {
+        background: #080b0a;
+        border-color: #29312e;
+        border-bottom: none;
+        box-shadow: none !important; }
+        body.arashtad-admin #wp-media-modal .media-frame-router .media-router .media-menu-item:active:last-child, body.arashtad-admin #wp-media-modal .media-frame-router .media-router .media-menu-item:focus:last-child, body.arashtad-admin #wp-media-modal .media-frame-router .media-router .media-menu-item.active:last-child {
+          border-color: #29312e;
+          border-bottom: none; }
+  body.arashtad-admin .wp-core-ui .attachment:focus, body.arashtad-admin .wp-core-ui .attachment:active, body.arashtad-admin .wp-core-ui .attachment.details {
+    box-shadow: inset 0 0 0 3px #202925, inset 0 0 0 7px #1d806f; }
+    body.arashtad-admin .wp-core-ui .attachment:focus .check, body.arashtad-admin .wp-core-ui .attachment:active .check, body.arashtad-admin .wp-core-ui .attachment.details .check {
+      background: #26a38c;
+      box-shadow: inset 0 0 0 3px #202925, inset 0 0 0 7px #1d806f; }
+  body.arashtad-admin .postbox-header {
+    display: flex !important;
+    border-color: #29312e; }
+  body.arashtad-admin #major-publishing-actions {
+    border-color: #29312e;
+    background: #0b0e0d; }
+  body.arashtad-admin .widefat tfoot td,
+  body.arashtad-admin .widefat tfoot th {
+    border-color: #29312e; }
+  body.arashtad-admin a {
+    color: #26a38c;
+    transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease; }
+    body.arashtad-admin a:hover {
+      color: #39b69f; }
+    body.arashtad-admin a:focus, body.arashtad-admin a:active {
+      color: #39b69f;
+      outline: none;
+      box-shadow: 0 0 0 1px #26a38c; }
+  body.arashtad-admin hr {
+    height: 1px;
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #29312e;
+    background: transparent; }
+  body.arashtad-admin .wrap {
+    color: #d2d8d5; }
+    body.arashtad-admin .wrap > h1,
+    body.arashtad-admin .wrap > h2.wp-heading-inline {
+      color: #f1f4f3;
+      font-weight: 500;
+      letter-spacing: .02em; }
+    body.arashtad-admin .wrap > h1 {
+      margin-bottom: 18px; }
+
+body.arashtad-admin #adminmenuback,
+body.arashtad-admin #adminmenuwrap,
+body.arashtad-admin #adminmenu {
+  background: #0b0e0d; }
+body.arashtad-admin #adminmenu {
+  border-right: 1px solid #29312e; }
+  body.arashtad-admin #adminmenu a {
+    color: #89938e; }
+    body.arashtad-admin #adminmenu a:hover, body.arashtad-admin #adminmenu a:focus {
+      background: #1c2421;
+      color: #f1f4f3;
+      box-shadow: none;
+      outline: none; }
+  body.arashtad-admin #adminmenu .wp-has-current-submenu > a.wp-has-current-submenu,
+  body.arashtad-admin #adminmenu .wp-has-current-submenu > a.current,
+  body.arashtad-admin #adminmenu .current a.menu-top,
+  body.arashtad-admin #adminmenu .wp-menu-open a.menu-top {
+    background: #171c1a;
+    color: #f1f4f3;
+    box-shadow: inset 3px 0 0 #26a38c; }
+  body.arashtad-admin #adminmenu .wp-submenu {
+    background: #080b0a; }
+    body.arashtad-admin #adminmenu .wp-submenu a {
+      color: #89938e; }
+      body.arashtad-admin #adminmenu .wp-submenu a:hover, body.arashtad-admin #adminmenu .wp-submenu a:focus {
+        background: #1c2421;
+        color: #39b69f;
+        box-shadow: none;
+        outline: none; }
+  body.arashtad-admin #adminmenu .wp-menu-arrow {
+    display: none; }
+
+body.arashtad-admin .button,
+body.arashtad-admin .button-secondary,
+body.arashtad-admin .button-primary,
+body.arashtad-admin button,
+body.arashtad-admin input[type="submit"],
+body.arashtad-admin input[type="button"],
+body.arashtad-admin input[type="reset"] {
+  min-height: 32px;
+  padding: 0 13px;
+  border: 1px solid #36403c;
+  border-radius: 4px;
+  background: #171c1a;
+  color: #d2d8d5 !important;
+  box-shadow: none;
+  text-shadow: none;
+  font-weight: 500;
+  line-height: 34px;
+  user-select: none;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, box-shadow 160ms ease, transform 160ms ease; }
+  body.arashtad-admin .button:hover,
+  body.arashtad-admin .button-secondary:hover,
+  body.arashtad-admin .button-primary:hover,
+  body.arashtad-admin button:hover,
+  body.arashtad-admin input[type="submit"]:hover,
+  body.arashtad-admin input[type="button"]:hover,
+  body.arashtad-admin input[type="reset"]:hover {
+    border-color: #26a38c;
+    background: #1c2421;
+    color: #f1f4f3;
+    box-shadow: none; }
+  body.arashtad-admin .button:focus, body.arashtad-admin .button:focus-visible,
+  body.arashtad-admin .button-secondary:focus,
+  body.arashtad-admin .button-secondary:focus-visible,
+  body.arashtad-admin .button-primary:focus,
+  body.arashtad-admin .button-primary:focus-visible,
+  body.arashtad-admin button:focus,
+  body.arashtad-admin button:focus-visible,
+  body.arashtad-admin input[type="submit"]:focus,
+  body.arashtad-admin input[type="submit"]:focus-visible,
+  body.arashtad-admin input[type="button"]:focus,
+  body.arashtad-admin input[type="button"]:focus-visible,
+  body.arashtad-admin input[type="reset"]:focus,
+  body.arashtad-admin input[type="reset"]:focus-visible {
+    border-color: #26a38c;
+    background: #1c2421;
+    color: #f1f4f3;
+    outline: none;
+    box-shadow: 0 0 0 1px #26a38c !important; }
+  body.arashtad-admin .button:active,
+  body.arashtad-admin .button-secondary:active,
+  body.arashtad-admin .button-primary:active,
+  body.arashtad-admin button:active,
+  body.arashtad-admin input[type="submit"]:active,
+  body.arashtad-admin input[type="button"]:active,
+  body.arashtad-admin input[type="reset"]:active {
+    border-color: #1d806f;
+    background: #202925;
+    color: #f1f4f3;
+    outline: none;
+    box-shadow: none !important;
+    transform: translateY(1px); }
+  body.arashtad-admin .button:disabled, body.arashtad-admin .button.disabled,
+  body.arashtad-admin .button-secondary:disabled,
+  body.arashtad-admin .button-secondary.disabled,
+  body.arashtad-admin .button-primary:disabled,
+  body.arashtad-admin .button-primary.disabled,
+  body.arashtad-admin button:disabled,
+  body.arashtad-admin button.disabled,
+  body.arashtad-admin input[type="submit"]:disabled,
+  body.arashtad-admin input[type="submit"].disabled,
+  body.arashtad-admin input[type="button"]:disabled,
+  body.arashtad-admin input[type="button"].disabled,
+  body.arashtad-admin input[type="reset"]:disabled,
+  body.arashtad-admin input[type="reset"].disabled {
+    border-color: #29312e;
+    background: #0b0e0d;
+    color: #89938e;
+    opacity: .45;
+    cursor: not-allowed; }
+body.arashtad-admin .button-primary {
+  border-color: #1d806f;
+  background: #26a38c;
+  color: #07100e; }
+  body.arashtad-admin .button-primary:hover {
+    border-color: #39b69f;
+    background: #39b69f;
+    color: #06100d; }
+  body.arashtad-admin .button-primary:focus, body.arashtad-admin .button-primary:focus-visible {
+    border-color: #39b69f;
+    background: #26a38c;
+    color: #07100e;
+    box-shadow: 0 0 0 1px #39b69f !important; }
+  body.arashtad-admin .button-primary:active {
+    border-color: #1d806f;
+    background: #1d806f;
+    color: #f1f4f3; }
+body.arashtad-admin .button-link {
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #26a38c;
+  box-shadow: none; }
+  body.arashtad-admin .button-link:hover, body.arashtad-admin .button-link:focus, body.arashtad-admin .button-link:active {
+    border: 0;
+    background: transparent;
+    color: #39b69f;
+    box-shadow: none !important;
+    transform: none; }
+body.arashtad-admin .submitdelete,
+body.arashtad-admin .button-link-delete {
+  color: #c95c5c; }
+  body.arashtad-admin .submitdelete:hover, body.arashtad-admin .submitdelete:focus, body.arashtad-admin .submitdelete:active,
+  body.arashtad-admin .button-link-delete:hover,
+  body.arashtad-admin .button-link-delete:focus,
+  body.arashtad-admin .button-link-delete:active {
+    color: #df7474; }
+
+body.arashtad-admin .page-title-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  margin-left: 8px;
+  padding: 0 13px;
+  border: 1px solid #1d806f !important;
+  border-radius: 4px;
+  background: #26a38c !important;
+  color: #07100e !important;
+  box-shadow: none !important;
+  text-shadow: none;
+  font-weight: 600;
+  line-height: 30px;
+  text-decoration: none; }
+  body.arashtad-admin .page-title-action:hover {
+    border-color: #39b69f !important;
+    background: #39b69f !important;
+    color: #06100d !important; }
+  body.arashtad-admin .page-title-action:focus, body.arashtad-admin .page-title-action:focus-visible {
+    border-color: #39b69f !important;
+    background: #26a38c !important;
+    color: #07100e !important;
+    outline: none !important;
+    box-shadow: 0 0 0 1px #39b69f !important; }
+  body.arashtad-admin .page-title-action:active {
+    border-color: #1d806f !important;
+    background: #1d806f !important;
+    color: #f1f4f3 !important;
+    box-shadow: none !important; }
+
+body.arashtad-admin input[type="text"],
+body.arashtad-admin input[type="search"],
+body.arashtad-admin input[type="email"],
+body.arashtad-admin input[type="url"],
+body.arashtad-admin input[type="number"],
+body.arashtad-admin input[type="password"],
+body.arashtad-admin input[type="tel"],
+body.arashtad-admin input[type="date"],
+body.arashtad-admin input[type="time"],
+body.arashtad-admin input[type="datetime-local"],
+body.arashtad-admin textarea,
+body.arashtad-admin select {
+  min-height: 36px;
+  border: 1px solid #36403c;
+  border-radius: 3px;
+  background: #0b0e0d;
+  color: #d2d8d5;
+  box-shadow: none;
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease, box-shadow 160ms ease; }
+  body.arashtad-admin input[type="text"]:hover,
+  body.arashtad-admin input[type="search"]:hover,
+  body.arashtad-admin input[type="email"]:hover,
+  body.arashtad-admin input[type="url"]:hover,
+  body.arashtad-admin input[type="number"]:hover,
+  body.arashtad-admin input[type="password"]:hover,
+  body.arashtad-admin input[type="tel"]:hover,
+  body.arashtad-admin input[type="date"]:hover,
+  body.arashtad-admin input[type="time"]:hover,
+  body.arashtad-admin input[type="datetime-local"]:hover,
+  body.arashtad-admin textarea:hover,
+  body.arashtad-admin select:hover {
+    border-color: #1d806f;
+    color: #d2d8d5; }
+  body.arashtad-admin input[type="text"]:focus, body.arashtad-admin input[type="text"]:focus-visible,
+  body.arashtad-admin input[type="search"]:focus,
+  body.arashtad-admin input[type="search"]:focus-visible,
+  body.arashtad-admin input[type="email"]:focus,
+  body.arashtad-admin input[type="email"]:focus-visible,
+  body.arashtad-admin input[type="url"]:focus,
+  body.arashtad-admin input[type="url"]:focus-visible,
+  body.arashtad-admin input[type="number"]:focus,
+  body.arashtad-admin input[type="number"]:focus-visible,
+  body.arashtad-admin input[type="password"]:focus,
+  body.arashtad-admin input[type="password"]:focus-visible,
+  body.arashtad-admin input[type="tel"]:focus,
+  body.arashtad-admin input[type="tel"]:focus-visible,
+  body.arashtad-admin input[type="date"]:focus,
+  body.arashtad-admin input[type="date"]:focus-visible,
+  body.arashtad-admin input[type="time"]:focus,
+  body.arashtad-admin input[type="time"]:focus-visible,
+  body.arashtad-admin input[type="datetime-local"]:focus,
+  body.arashtad-admin input[type="datetime-local"]:focus-visible,
+  body.arashtad-admin textarea:focus,
+  body.arashtad-admin textarea:focus-visible,
+  body.arashtad-admin select:focus,
+  body.arashtad-admin select:focus-visible {
+    border-color: #26a38c;
+    background: #080b0a;
+    color: #f1f4f3;
+    outline: none;
+    box-shadow: 0 0 0 1px #26a38c !important; }
+  body.arashtad-admin input[type="text"]:disabled,
+  body.arashtad-admin input[type="search"]:disabled,
+  body.arashtad-admin input[type="email"]:disabled,
+  body.arashtad-admin input[type="url"]:disabled,
+  body.arashtad-admin input[type="number"]:disabled,
+  body.arashtad-admin input[type="password"]:disabled,
+  body.arashtad-admin input[type="tel"]:disabled,
+  body.arashtad-admin input[type="date"]:disabled,
+  body.arashtad-admin input[type="time"]:disabled,
+  body.arashtad-admin input[type="datetime-local"]:disabled,
+  body.arashtad-admin textarea:disabled,
+  body.arashtad-admin select:disabled {
+    border-color: #29312e;
+    background: #0b0e0d;
+    color: #89938e;
+    opacity: .45; }
+body.arashtad-admin input::placeholder,
+body.arashtad-admin textarea::placeholder {
+  color: #89938e;
+  opacity: .8; }
+body.arashtad-admin select option {
+  background: #0b0e0d;
+  color: #d2d8d5; }
+  body.arashtad-admin select option:checked, body.arashtad-admin select option:hover {
+    background: #26a38c;
+    color: #07100e; }
+body.arashtad-admin label {
+  color: #d2d8d5; }
+body.arashtad-admin .description,
+body.arashtad-admin p.description {
+  color: #89938e; }
+
+body.arashtad-admin input[type="checkbox"],
+body.arashtad-admin input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin: 0 5px 0 0;
+  border: 1px solid #36403c;
+  background: #0b0e0d;
+  box-shadow: none;
+  transition: border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease; }
+  body.arashtad-admin input[type="checkbox"]:hover,
+  body.arashtad-admin input[type="radio"]:hover {
+    border-color: #26a38c; }
+  body.arashtad-admin input[type="checkbox"]:focus, body.arashtad-admin input[type="checkbox"]:focus-visible,
+  body.arashtad-admin input[type="radio"]:focus,
+  body.arashtad-admin input[type="radio"]:focus-visible {
+    border-color: #26a38c;
+    outline: none;
+    box-shadow: 0 0 0 1px #26a38c !important; }
+  body.arashtad-admin input[type="checkbox"]:checked,
+  body.arashtad-admin input[type="radio"]:checked {
+    border-color: #26a38c;
+    background-color: #26a38c; }
+body.arashtad-admin input[type="radio"] {
+  border-radius: 50%; }
+body.arashtad-admin input[type="checkbox"] {
+  border-radius: 3px; }
+
+body.arashtad-admin .arashtad-model-type-group {
+  display: flex;
+  width: 100%;
+  margin: 0; }
+  body.arashtad-admin .arashtad-model-type-group label {
+    position: relative;
+    flex: 1 1 0;
+    margin: 0;
+    cursor: pointer; }
+    body.arashtad-admin .arashtad-model-type-group label input[type="radio"] {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      opacity: 0;
+      pointer-events: none; }
+      body.arashtad-admin .arashtad-model-type-group label input[type="radio"]:checked + span {
+        border-color: #26a38c;
+        background: #26a38c;
+        color: #07100e; }
+      body.arashtad-admin .arashtad-model-type-group label input[type="radio"]:focus-visible + span {
+        z-index: 2;
+        border-color: #39b69f;
+        box-shadow: 0 0 0 1px #39b69f; }
+    body.arashtad-admin .arashtad-model-type-group label span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      padding: 0 12px;
+      border: 1px solid #36403c;
+      background: #0b0e0d;
+      color: #d2d8d5;
+      text-align: center;
+      transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease; }
+      body.arashtad-admin .arashtad-model-type-group label span:hover {
+        border-color: #1d806f;
+        background: #1c2421;
+        color: #f1f4f3; }
+    body.arashtad-admin .arashtad-model-type-group label:first-child span {
+      border-radius: 4px 0 0 4px; }
+    body.arashtad-admin .arashtad-model-type-group label:not(:first-child) span {
+      margin-left: -1px; }
+    body.arashtad-admin .arashtad-model-type-group label:last-child span {
+      border-radius: 0 4px 4px 0; }
+
+body.arashtad-admin .postbox {
+  position: relative;
+  margin-bottom: 18px;
+  border: 1px solid #29312e;
+  border-radius: 4px;
+  background: #171c1a;
+  color: #d2d8d5;
+  box-shadow: none;
+  overflow: hidden; }
+  body.arashtad-admin .postbox .hndle {
+    padding: 12px 14px;
+    border-bottom: 1px solid #29312e;
+    background: #0b0e0d;
+    color: #f1f4f3;
+    font-weight: 500;
+    letter-spacing: .025em; }
+  body.arashtad-admin .postbox .handlediv {
+    color: #89938e;
+    background: transparent;
+    border: 0;
+    box-shadow: none; }
+    body.arashtad-admin .postbox .handlediv:hover, body.arashtad-admin .postbox .handlediv:focus, body.arashtad-admin .postbox .handlediv:active {
+      background: transparent;
+      color: #26a38c;
+      border: 0;
+      outline: none;
+      box-shadow: none !important; }
+  body.arashtad-admin .postbox .inside {
+    margin: 0;
+    padding: 18px;
+    color: #d2d8d5; }
+    body.arashtad-admin .postbox .inside > .submit,
+    body.arashtad-admin .postbox .inside > p.submit {
+      margin: 18px -18px -18px;
+      padding: 14px 18px;
+      border-top: 1px solid #29312e;
+      background: #0b0e0d; }
+    body.arashtad-admin .postbox .inside .button,
+    body.arashtad-admin .postbox .inside .button-secondary,
+    body.arashtad-admin .postbox .inside button {
+      background: #0b0e0d;
+      border-color: #36403c;
+      color: #d2d8d5; }
+      body.arashtad-admin .postbox .inside .button:hover,
+      body.arashtad-admin .postbox .inside .button-secondary:hover,
+      body.arashtad-admin .postbox .inside button:hover {
+        background: #1c2421;
+        border-color: #26a38c;
+        color: #f1f4f3; }
+      body.arashtad-admin .postbox .inside .button:focus, body.arashtad-admin .postbox .inside .button:focus-visible,
+      body.arashtad-admin .postbox .inside .button-secondary:focus,
+      body.arashtad-admin .postbox .inside .button-secondary:focus-visible,
+      body.arashtad-admin .postbox .inside button:focus,
+      body.arashtad-admin .postbox .inside button:focus-visible {
+        background: #1c2421;
+        border-color: #26a38c;
+        color: #f1f4f3;
+        box-shadow: 0 0 0 1px #26a38c !important;
+        outline: none; }
+      body.arashtad-admin .postbox .inside .button:active,
+      body.arashtad-admin .postbox .inside .button-secondary:active,
+      body.arashtad-admin .postbox .inside button:active {
+        background: #202925;
+        border-color: #1d806f;
+        color: #f1f4f3;
+        box-shadow: none !important; }
+    body.arashtad-admin .postbox .inside .button-primary {
+      background: #26a38c;
+      border-color: #1d806f;
+      color: #07100e; }
+      body.arashtad-admin .postbox .inside .button-primary:hover {
+        background: #39b69f;
+        border-color: #39b69f;
+        color: #06100d; }
+      body.arashtad-admin .postbox .inside .button-primary:focus, body.arashtad-admin .postbox .inside .button-primary:focus-visible {
+        background: #26a38c;
+        border-color: #39b69f;
+        color: #07100e;
+        box-shadow: 0 0 0 1px #39b69f !important; }
+      body.arashtad-admin .postbox .inside .button-primary:active {
+        background: #1d806f;
+        border-color: #1d806f;
+        color: #f1f4f3; }
+  body.arashtad-admin .postbox.closed .hndle {
+    border-bottom: 0; }
+
+body.arashtad-admin .wp-list-table {
+  border: 1px solid #29312e;
+  border-radius: 4px;
+  background: #171c1a;
+  color: #d2d8d5;
+  box-shadow: none;
+  overflow: hidden; }
+  body.arashtad-admin .wp-list-table thead,
+  body.arashtad-admin .wp-list-table tfoot {
+    background: #0b0e0d; }
+  body.arashtad-admin .wp-list-table th,
+  body.arashtad-admin .wp-list-table td {
+    border-bottom: 1px solid #29312e;
+    color: #d2d8d5; }
+  body.arashtad-admin .wp-list-table th {
+    color: #89938e;
+    font-weight: 500; }
+    body.arashtad-admin .wp-list-table th a {
+      color: #89938e; }
+      body.arashtad-admin .wp-list-table th a:hover {
+        color: #39b69f; }
+      body.arashtad-admin .wp-list-table th a:focus, body.arashtad-admin .wp-list-table th a:active {
+        color: #39b69f;
+        outline: none;
+        box-shadow: none; }
+  body.arashtad-admin .wp-list-table tbody tr {
+    background: #171c1a;
+    transition: background-color 160ms ease; }
+    body.arashtad-admin .wp-list-table tbody tr:hover {
+      background: #1c2421; }
+    body.arashtad-admin .wp-list-table tbody tr:last-child td {
+      border-bottom: 0; }
+  body.arashtad-admin .wp-list-table .row-title {
+    color: #26a38c;
+    font-weight: 500; }
+    body.arashtad-admin .wp-list-table .row-title:hover {
+      color: #39b69f; }
+    body.arashtad-admin .wp-list-table .row-title:focus, body.arashtad-admin .wp-list-table .row-title:active {
+      color: #39b69f;
+      outline: none;
+      box-shadow: none; }
+  body.arashtad-admin .wp-list-table .column-primary {
+    color: #f1f4f3; }
+  body.arashtad-admin .wp-list-table .check-column {
+    width: 32px; }
+  body.arashtad-admin .wp-list-table input[type="checkbox"] {
+    margin-top: 0; }
+body.arashtad-admin .row-actions {
+  color: #89938e; }
+  body.arashtad-admin .row-actions a {
+    color: #26a38c; }
+    body.arashtad-admin .row-actions a:hover {
+      color: #39b69f; }
+    body.arashtad-admin .row-actions a:focus, body.arashtad-admin .row-actions a:active {
+      color: #39b69f;
+      outline: none;
+      box-shadow: none; }
+  body.arashtad-admin .row-actions .trash a,
+  body.arashtad-admin .row-actions .delete a {
+    color: #c95c5c; }
+    body.arashtad-admin .row-actions .trash a:hover,
+    body.arashtad-admin .row-actions .delete a:hover {
+      color: #df7474; }
+
+body.arashtad-admin .tablenav {
+  color: #89938e; }
+  body.arashtad-admin .tablenav .actions {
+    color: #d2d8d5; }
+    body.arashtad-admin .tablenav .actions select {
+      min-width: 130px; }
+  body.arashtad-admin .tablenav .tablenav-pages {
+    color: #89938e; }
+    body.arashtad-admin .tablenav .tablenav-pages a,
+    body.arashtad-admin .tablenav .tablenav-pages .current {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 30px;
+      height: 30px;
+      margin-left: 3px;
+      padding: 0 7px;
+      border: 1px solid #29312e;
+      border-radius: 3px;
+      background: #171c1a;
+      color: #d2d8d5;
+      box-sizing: border-box;
+      box-shadow: none;
+      text-decoration: none; }
+      body.arashtad-admin .tablenav .tablenav-pages a:hover,
+      body.arashtad-admin .tablenav .tablenav-pages .current:hover {
+        border-color: #26a38c;
+        background: #1c2421;
+        color: #39b69f; }
+      body.arashtad-admin .tablenav .tablenav-pages a:focus, body.arashtad-admin .tablenav .tablenav-pages a:active,
+      body.arashtad-admin .tablenav .tablenav-pages .current:focus,
+      body.arashtad-admin .tablenav .tablenav-pages .current:active {
+        border-color: #26a38c;
+        background: #1c2421;
+        color: #39b69f;
+        outline: none;
+        box-shadow: none; }
+    body.arashtad-admin .tablenav .tablenav-pages .current {
+      border-color: #1d806f;
+      background: #26a38c;
+      color: #07100e; }
+body.arashtad-admin #posts-filter .search-box input[type="search"] {
+  background: #0b0e0d; }
+body.arashtad-admin #posts-filter .search-box .button {
+  margin-left: 4px; }
+
+body.arashtad-admin .inline-edit-row {
+  border: 1px solid #29312e;
+  background: #0b0e0d;
+  color: #d2d8d5; }
+  body.arashtad-admin .inline-edit-row fieldset {
+    color: #d2d8d5; }
+  body.arashtad-admin .inline-edit-row label span.title {
+    color: #89938e; }
+  body.arashtad-admin .inline-edit-row .submit {
+    border-top: 1px solid #29312e;
+    background: #080b0a; }
+    body.arashtad-admin .inline-edit-row .submit .button {
+      background: #171c1a; }
+  body.arashtad-admin .inline-edit-row .cancel {
+    color: #c95c5c; }
+    body.arashtad-admin .inline-edit-row .cancel:hover {
+      color: #df7474; }
+
+body.arashtad-admin #poststuff {
+  color: #d2d8d5; }
+body.arashtad-admin #title {
+  min-height: 44px;
+  border-color: #36403c;
+  background: #0b0e0d;
+  color: #f1f4f3;
+  font-size: 20px; }
+  body.arashtad-admin #title:focus {
+    border-color: #26a38c;
+    outline: none;
+    box-shadow: 0 0 0 1px #26a38c !important; }
+body.arashtad-admin .wp-editor-container {
+  border-color: #29312e;
+  background: #0b0e0d; }
+body.arashtad-admin .wp-editor-area {
+  border-color: #29312e;
+  background: #0b0e0d;
+  color: #d2d8d5; }
+body.arashtad-admin .quicktags-toolbar {
+  border-bottom-color: #29312e;
+  background: #171c1a; }
+  body.arashtad-admin .quicktags-toolbar input {
+    background: #0b0e0d;
+    border-color: #36403c;
+    color: #d2d8d5; }
+    body.arashtad-admin .quicktags-toolbar input:hover {
+      border-color: #26a38c; }
+    body.arashtad-admin .quicktags-toolbar input:focus {
+      border-color: #26a38c;
+      box-shadow: 0 0 0 1px #26a38c !important; }
+
+body.arashtad-admin #submitdiv {
+  border-color: #29312e;
+  background: #171c1a; }
+  body.arashtad-admin #submitdiv .hndle {
+    background: #0b0e0d; }
+  body.arashtad-admin #submitdiv .misc-pub-section {
+    border-top-color: #29312e;
+    color: #89938e; }
+  body.arashtad-admin #submitdiv #publishing-action .button {
+    background: #26a38c;
+    border-color: #1d806f;
+    color: #07100e; }
+    body.arashtad-admin #submitdiv #publishing-action .button:hover {
+      background: #39b69f;
+      border-color: #39b69f; }
+    body.arashtad-admin #submitdiv #publishing-action .button:focus {
+      box-shadow: 0 0 0 1px #39b69f !important; }
+    body.arashtad-admin #submitdiv #publishing-action .button:active {
+      background: #1d806f;
+      color: #f1f4f3; }
+  body.arashtad-admin #submitdiv #delete-action a {
+    color: #c95c5c; }
+    body.arashtad-admin #submitdiv #delete-action a:hover {
+      color: #df7474; }
+
+body.arashtad-admin .notice,
+body.arashtad-admin .updated,
+body.arashtad-admin .error {
+  border: 1px solid #29312e;
+  border-left: 3px solid #26a38c;
+  border-radius: 4px;
+  background: #171c1a;
+  color: #d2d8d5;
+  box-shadow: none; }
+  body.arashtad-admin .notice p,
+  body.arashtad-admin .updated p,
+  body.arashtad-admin .error p {
+    color: #d2d8d5; }
+body.arashtad-admin .notice-error,
+body.arashtad-admin .error {
+  border-left-color: #c95c5c; }
+body.arashtad-admin .notice-warning {
+  border-left-color: #ff9000; }
+body.arashtad-admin .notice-success,
+body.arashtad-admin .updated {
+  border-left-color: #26a38c; }
+
+body.arashtad-settings-page .form-table {
+  border: 1px solid #29312e;
+  border-collapse: collapse;
+  background: #171c1a; }
+  body.arashtad-settings-page .form-table th,
+  body.arashtad-settings-page .form-table td {
+    padding: 18px;
+    border-bottom: 1px solid #29312e; }
+  body.arashtad-settings-page .form-table th {
+    width: 220px;
+    background: #0b0e0d;
+    color: #d2d8d5;
+    font-weight: 500; }
+  body.arashtad-settings-page .form-table td {
+    color: #d2d8d5; }
+  body.arashtad-settings-page .form-table tr:last-child th,
+  body.arashtad-settings-page .form-table tr:last-child td {
+    border-bottom: 0; }
+body.arashtad-settings-page .submit {
+  padding-top: 18px; }
+
+body.arashtad-admin .arashtad-shortcode button,
+body.arashtad-admin .arashtad-shortcode .button,
+body.arashtad-admin .arashtad-shortcode-copy button,
+body.arashtad-admin .arashtad-shortcode-copy .button {
+  background: #0b0e0d !important;
+  border: 1px solid #36403c !important;
+  color: #26a38c !important;
+  box-shadow: none !important;
+  outline: none; }
+  body.arashtad-admin .arashtad-shortcode button:hover,
+  body.arashtad-admin .arashtad-shortcode .button:hover,
+  body.arashtad-admin .arashtad-shortcode-copy button:hover,
+  body.arashtad-admin .arashtad-shortcode-copy .button:hover {
+    background: #1c2421 !important;
+    border-color: #26a38c !important;
+    color: #39b69f !important;
+    box-shadow: none !important; }
+  body.arashtad-admin .arashtad-shortcode button:focus, body.arashtad-admin .arashtad-shortcode button:focus-visible,
+  body.arashtad-admin .arashtad-shortcode .button:focus,
+  body.arashtad-admin .arashtad-shortcode .button:focus-visible,
+  body.arashtad-admin .arashtad-shortcode-copy button:focus,
+  body.arashtad-admin .arashtad-shortcode-copy button:focus-visible,
+  body.arashtad-admin .arashtad-shortcode-copy .button:focus,
+  body.arashtad-admin .arashtad-shortcode-copy .button:focus-visible {
+    background: #1c2421 !important;
+    border-color: #26a38c !important;
+    color: #39b69f !important;
+    outline: none !important;
+    box-shadow: 0 0 0 1px #26a38c !important; }
+  body.arashtad-admin .arashtad-shortcode button:active,
+  body.arashtad-admin .arashtad-shortcode .button:active,
+  body.arashtad-admin .arashtad-shortcode-copy button:active,
+  body.arashtad-admin .arashtad-shortcode-copy .button:active {
+    background: #202925 !important;
+    border-color: #1d806f !important;
+    color: #26a38c !important;
+    outline: none !important;
+    box-shadow: none !important; }
+
+body.arashtad-admin .select2-container .select2-selection--single,
+body.arashtad-admin .select2-container .select2-selection--multiple {
+  min-height: 36px;
+  border: 1px solid #36403c;
+  border-radius: 3px;
+  background: #0b0e0d;
+  color: #d2d8d5;
+  box-shadow: none; }
+body.arashtad-admin .select2-container .select2-selection__rendered {
+  color: #d2d8d5; }
+body.arashtad-admin .select2-container.select2-container--focus .select2-selection, body.arashtad-admin .select2-container.select2-container--open .select2-selection {
+  border-color: #26a38c;
+  box-shadow: 0 0 0 1px #26a38c; }
+body.arashtad-admin .select2-dropdown {
+  border-color: #29312e;
+  background: #0b0e0d;
+  color: #d2d8d5; }
+body.arashtad-admin .select2-results__option {
+  background: #0b0e0d;
+  color: #d2d8d5; }
+  body.arashtad-admin .select2-results__option--highlighted[aria-selected] {
+    background: #26a38c;
+    color: #07100e; }
+  body.arashtad-admin .select2-results__option[aria-selected="true"] {
+    background: #202925;
+    color: #39b69f; }
+
+body.arashtad-admin .arashtad-section,
+body.arashtad-admin .arashtad-panel,
+body.arashtad-admin .arashtad-box {
+  position: relative;
+  transform: scaleX(0) scaleY(1);
+  width: 0;
+  max-width: 100%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  opacity: 0;
+  box-sizing: border-box;
+  animation: arashtad-reveal-section 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards; }
+  body.arashtad-admin .arashtad-section > *,
+  body.arashtad-admin .arashtad-panel > *,
+  body.arashtad-admin .arashtad-box > * {
+    display: none;
+    animation: arashtad-reveal-inner 1s .7s linear forwards; }
+body.arashtad-admin .arashtad-section {
+  animation-delay: 80ms; }
+body.arashtad-admin .arashtad-panel {
+  animation-delay: 160ms; }
+body.arashtad-admin .arashtad-box {
+  animation-delay: 240ms; }
+body.arashtad-admin .resources a {
+  text-decoration: none; }
+  body.arashtad-admin .resources a:active, body.arashtad-admin .resources a:focus, body.arashtad-admin .resources a:hover {
+    box-shadow: none !important; }
+body.arashtad-admin ul.subsubsub li.all a, body.arashtad-admin ul.subsubsub li.publish a, body.arashtad-admin ul.subsubsub li.trash a {
+  color: #26a38c; }
+body.arashtad-admin #collapse-button:focus, body.arashtad-admin #collapse-button:hover {
+  background: #101412;
+  box-shadow: none; }
+body.arashtad-admin #collapse-button .collapse-button-label {
+  top: 0; }
+body.arashtad-admin #adminmenu a:hover,
+body.arashtad-admin #adminmenu li.menu-top:hover,
+body.arashtad-admin #adminmenu li.opensub > a.menu-top,
+body.arashtad-admin #adminmenu li > a.menu-top:focus {
+  background: #101412;
+  box-shadow: none; }
+body.arashtad-admin #adminmenu .awaiting-mod,
+body.arashtad-admin #adminmenu .menu-counter,
+body.arashtad-admin #adminmenu .update-plugins {
+  background: #26a38c; }
+body.arashtad-admin #adminmenu li.current a.menu-top,
+body.arashtad-admin #adminmenu li.wp-has-current-submenu .wp-submenu .wp-submenu-head,
+body.arashtad-admin #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
+body.arashtad-admin #adminmenu .folded #adminmenu li.current.menu-top {
+  background: #1c2421; }
+body.arashtad-admin #adminmenu .wp-submenu a:focus,
+body.arashtad-admin #adminmenu .wp-submenu a:hover,
+body.arashtad-admin #adminmenu .wp-submenu li.current a:focus,
+body.arashtad-admin #adminmenu .wp-submenu li.current a:hover,
+body.arashtad-admin #adminmenu .wp-submenu li.current a:focus,
+body.arashtad-admin #adminmenu .wp-submenu li.current a:hover {
+  color: #d2d8d5; }
+body.arashtad-admin #adminmenu a.wp-has-current-submenu:focus + .wp-submenu a:focus, body.arashtad-admin #adminmenu a.wp-has-current-submenu:focus + .wp-submenu a:hover
+body.arashtad-admin #adminmenu a.wp-has-current-submenu:focus + .wp-submenu li.current a:hover, body.arashtad-admin #adminmenu a.wp-has-current-submenu:focus + .wp-submenu li.current a:focus, body.arashtad-admin #adminmenu a.wp-has-current-submenu:focus + .wp-submenu li.current a:focus, body.arashtad-admin #adminmenu a.wp-has-current-submenu:focus + .wp-submenu li.current a:hover {
+  color: #d2d8d5; }
+body.arashtad-admin #adminmenu .wp-has-current-submenu .wp-submenu a:focus, body.arashtad-admin #adminmenu .wp-has-current-submenu .wp-submenu a:hover {
+  color: #d2d8d5; }
+body.arashtad-admin #adminmenu .wp-has-current-submenu.opensub .wp-submenu a:focus,
+body.arashtad-admin #adminmenu .wp-has-current-submenu.opensub .wp-submenu a:hover,
+body.arashtad-admin #adminmenu .wp-has-current-submenu.opensub .wp-submenu li.current a:focus,
+body.arashtad-admin #adminmenu .wp-has-current-submenu.opensub .wp-submenu li.current a:hover,
+body.arashtad-admin #adminmenu .wp-has-current-submenu.opensub .wp-submenu li.current a:focus,
+body.arashtad-admin #adminmenu .wp-has-current-submenu.opensub .wp-submenu li.current a:hover {
+  color: #d2d8d5; }
+body.arashtad-admin .postbox {
+  position: relative;
+  transform: scaleX(0) scaleY(1);
+  animation: arashtad-reveal-section 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  transform-origin: center center;
+  overflow: hidden; }
+  body.arashtad-admin .postbox > * {
+    opacity: 0;
+    animation: arashtad-reveal-inner 1s .7s linear forwards; }
+  body.arashtad-admin .postbox:nth-child(1) {
+    animation-delay: 80ms; }
+  body.arashtad-admin .postbox:nth-child(2) {
+    animation-delay: 150ms; }
+  body.arashtad-admin .postbox:nth-child(3) {
+    animation-delay: 220ms; }
+  body.arashtad-admin .postbox:nth-child(4) {
+    animation-delay: 290ms; }
+  body.arashtad-admin .postbox:nth-child(5) {
+    animation-delay: 360ms; }
+  body.arashtad-admin .postbox:nth-child(6) {
+    animation-delay: 430ms; }
+  body.arashtad-admin .postbox:nth-child(7) {
+    animation-delay: 500ms; }
+body.arashtad-admin .wp-list-table {
+  transform: scaleX(0) scaleY(1);
+  animation: arashtad-reveal-section 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  transform-origin: center center; }
+  body.arashtad-admin .wp-list-table::before {
+    content: "";
+    display: block; }
+
+@keyframes arashtad-reveal-section {
+  0% {
+    transform: scaleX(0) scaleY(1); }
+  100% {
+    transform: scaleX(1) scaleY(1); } }
+@keyframes arashtad-reveal-inner {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0; }
+  5% {
+    display: block;
+    opacity: 1; }
+  10% {
+    display: block;
+    opacity: 0; }
+  15% {
+    display: block;
+    opacity: 1; }
+  20% {
+    display: block;
+    opacity: 0; }
+  25% {
+    display: block;
+    opacity: 1; }
+  30% {
+    display: block;
+    opacity: 0; }
+  35% {
+    display: block;
+    opacity: 1; }
+  100% {
+    display: block;
+    opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  body.arashtad-admin .arashtad-section,
+  body.arashtad-admin .arashtad-panel,
+  body.arashtad-admin .arashtad-box,
+  body.arashtad-admin .postbox,
+  body.arashtad-admin .wp-list-table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    animation: none; }
+    body.arashtad-admin .arashtad-section::before, body.arashtad-admin .arashtad-section::after,
+    body.arashtad-admin .arashtad-panel::before,
+    body.arashtad-admin .arashtad-panel::after,
+    body.arashtad-admin .arashtad-box::before,
+    body.arashtad-admin .arashtad-box::after,
+    body.arashtad-admin .postbox::before,
+    body.arashtad-admin .postbox::after,
+    body.arashtad-admin .wp-list-table::before,
+    body.arashtad-admin .wp-list-table::after {
+      display: none; } }
+@media screen and (max-width: 980px) {
+  .resources a {
+    display: block !important;
+    width: 100%;
+    margin: 3px 0 !important;
+    text-decoration: none; } }
+@media screen and (max-width: 782px) {
+  body.arashtad-admin #wpcontent {
+    padding-right: 10px;
+    padding-left: 10px; }
+  body.arashtad-admin .wrap > h1 {
+    font-size: 22px; }
+  body.arashtad-admin .postbox .inside {
+    padding: 14px; }
+    body.arashtad-admin .postbox .inside > .submit,
+    body.arashtad-admin .postbox .inside > p.submit {
+      margin-right: -14px;
+      margin-bottom: -14px;
+      margin-left: -14px;
+      padding-right: 14px;
+      padding-left: 14px; }
+  body.arashtad-admin .arashtad-model-type-group label span {
+    padding-right: 7px;
+    padding-left: 7px;
+    font-size: 12px; }
+
+  body.arashtad-settings-page .form-table,
+  body.arashtad-settings-page .form-table tbody,
+  body.arashtad-settings-page .form-table tr,
+  body.arashtad-settings-page .form-table th,
+  body.arashtad-settings-page .form-table td {
+    display: block;
+    width: auto;
+    box-sizing: border-box; }
+  body.arashtad-settings-page .form-table th,
+  body.arashtad-settings-page .form-table td {
+    padding: 12px 14px; } }
+.arashtad-pro-features {
+  background: #101412;
+  color: #d2d8d5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  padding: 40px 0 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .arashtad-pro-features .arashtad-pro-hero-visual .arashtad-3d-logo {
+    width: 345px;
+    max-width: 100%;
+    height: 345px; }
+  .arashtad-pro-features .arashtad-pro-eyebrow {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #26a38c;
+    margin-bottom: 8px; }
+  .arashtad-pro-features .arashtad-pro-badge {
+    display: inline-block;
+    background: #26a38c;
+    color: #080b0a;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 12px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px; }
+  .arashtad-pro-features h1, .arashtad-pro-features h2, .arashtad-pro-features h3 {
+    color: #f1f4f3;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 12px; }
+  .arashtad-pro-features h1 {
+    font-size: 42px; }
+  .arashtad-pro-features h2 {
+    font-size: 30px; }
+  .arashtad-pro-features h3 {
+    font-size: 20px; }
+  .arashtad-pro-features p {
+    color: #89938e;
+    margin: 0 0 16px; }
+  .arashtad-pro-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .arashtad-pro-features ul li {
+      position: relative;
+      padding: 0 0 0 22px;
+      color: #89938e;
+      font-size: 14px; }
+      .arashtad-pro-features ul li::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: #26a38c;
+        font-weight: 700; }
+  .arashtad-pro-features .button-primary {
+    background: #26a38c;
+    border: none;
+    border-radius: 4px;
+    color: #080b0a;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 32px;
+    height: auto;
+    line-height: 1.4;
+    transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+    box-shadow: 0 4px 16px rgba(38, 163, 140, 0.25); }
+    .arashtad-pro-features .button-primary:hover {
+      background: #39b69f;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(38, 163, 140, 0.35); }
+    .arashtad-pro-features .button-primary:active {
+      transform: translateY(0); }
+  .arashtad-pro-features .arashtad-pro-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #29312e; }
+    .arashtad-pro-features .arashtad-pro-hero-content h1 {
+      font-size: 46px;
+      margin-bottom: 16px; }
+      @media (max-width: 768px) {
+        .arashtad-pro-features .arashtad-pro-hero-content h1 {
+          font-size: 32px; } }
+    .arashtad-pro-features .arashtad-pro-hero-content .arashtad-pro-hero-lead {
+      font-size: 18px;
+      color: #f1f4f3;
+      margin-bottom: 8px; }
+    .arashtad-pro-features .arashtad-pro-hero-content .arashtad-pro-hero-description {
+      font-size: 15px;
+      margin-bottom: 28px; }
+    .arashtad-pro-features .arashtad-pro-hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      min-height: 200px; }
+      .arashtad-pro-features .arashtad-pro-hero-visual .arashtad-pro-orbit {
+        position: absolute;
+        border: 1px solid rgba(38, 163, 140, 0.15);
+        border-radius: 50%;
+        animation: arashtad-spin 20s linear infinite; }
+        .arashtad-pro-features .arashtad-pro-hero-visual .arashtad-pro-orbit-1 {
+          width: 160px;
+          height: 160px;
+          animation-duration: 25s; }
+        .arashtad-pro-features .arashtad-pro-hero-visual .arashtad-pro-orbit-2 {
+          width: 200px;
+          height: 200px;
+          animation-duration: 30s;
+          animation-direction: reverse; }
+      .arashtad-pro-features .arashtad-pro-hero-visual .arashtad-pro-model {
+        width: 80px;
+        height: 80px;
+        background: #171c1a;
+        border: 1px solid #26a38c;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        font-weight: 700;
+        color: #26a38c;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 0 40px rgba(38, 163, 140, 0.1); }
+    @media (max-width: 768px) {
+      .arashtad-pro-features .arashtad-pro-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-bottom: 40px; }
+        .arashtad-pro-features .arashtad-pro-hero .arashtad-pro-hero-visual {
+          min-height: 150px;
+          order: -1; } }
+@keyframes arashtad-spin {
+  to {
+    transform: rotate(360deg); } }
+  .arashtad-pro-features .arashtad-pro-section-heading {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 48px; }
+    .arashtad-pro-features .arashtad-pro-section-heading h2 {
+      margin-bottom: 8px; }
+    .arashtad-pro-features .arashtad-pro-section-heading p {
+      margin-bottom: 0; }
+  .arashtad-pro-features .arashtad-pro-progression {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    padding: 60px 24px; }
+    .arashtad-pro-features .arashtad-pro-progression .arashtad-pro-steps {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+      text-align: center; }
+    .arashtad-pro-features .arashtad-pro-progression .arashtad-pro-step {
+      transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+      background: #171c1a;
+      border: 1px solid #29312e;
+      border-radius: 4px;
+      padding: 20px 12px; }
+      .arashtad-pro-features .arashtad-pro-progression .arashtad-pro-step:hover {
+        background-color: #1c2421;
+        transform: translateY(-2px); }
+      .arashtad-pro-features .arashtad-pro-progression .arashtad-pro-step .arashtad-pro-step-number {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        color: #26a38c;
+        margin-bottom: 6px; }
+      .arashtad-pro-features .arashtad-pro-progression .arashtad-pro-step strong {
+        display: block;
+        color: #f1f4f3;
+        font-size: 14px;
+        margin-bottom: 2px; }
+      .arashtad-pro-features .arashtad-pro-progression .arashtad-pro-step span {
+        display: block;
+        color: #89938e;
+        font-size: 12px; }
+    @media (max-width: 992px) {
+      .arashtad-pro-features .arashtad-pro-progression .arashtad-pro-steps {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 480px) {
+      .arashtad-pro-features .arashtad-pro-progression .arashtad-pro-steps {
+        grid-template-columns: repeat(2, 1fr); } }
+  .arashtad-pro-features .arashtad-pro-feature {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    padding: 60px 24px;
+    border-top: 1px solid #29312e; }
+    .arashtad-pro-features .arashtad-pro-feature-large {
+      gap: 64px; }
+    .arashtad-pro-features .arashtad-pro-feature-reverse {
+      direction: rtl; }
+      .arashtad-pro-features .arashtad-pro-feature-reverse > * {
+        direction: ltr; }
+    .arashtad-pro-features .arashtad-pro-feature-content h2 {
+      font-size: 28px; }
+    .arashtad-pro-features .arashtad-pro-feature-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 180px; }
+    .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-feature-icon {
+      display: inline-block;
+      background: #171c1a;
+      border: 1px solid #26a38c;
+      border-radius: 3px;
+      color: #26a38c;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 12px;
+      letter-spacing: 1px;
+      margin-bottom: 12px; }
+    .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-visual-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px; }
+      .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-visual-grid span {
+        background: #171c1a;
+        border: 1px solid #29312e;
+        border-radius: 4px;
+        padding: 20px 8px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 14px;
+        color: #89938e;
+        transition: all 160ms ease; }
+        .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-visual-grid span:hover {
+          border-color: #26a38c;
+          color: #f1f4f3;
+          background: #1c2421; }
+    .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-scene-visual {
+      flex-direction: column;
+      gap: 8px;
+      padding: 20px; }
+      .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-scene-visual .arashtad-pro-scene-node {
+        background: #171c1a;
+        border: 1px solid #29312e;
+        border-radius: 4px;
+        padding: 12px 24px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: #89938e;
+        transition: all 160ms ease; }
+        .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-scene-visual .arashtad-pro-scene-node:hover {
+          border-color: #26a38c;
+          color: #f1f4f3; }
+      .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-scene-visual .arashtad-pro-scene-line {
+        width: 2px;
+        height: 16px;
+        background: #29312e; }
+    .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-loader-visual {
+      text-align: center; }
+      .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-loader-visual .arashtad-pro-loader-ring {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 12px;
+        border: 3px solid #29312e;
+        border-top-color: #26a38c;
+        border-radius: 50%;
+        animation: arashtad-spin 1s linear infinite; }
+      .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-loader-visual strong {
+        display: block;
+        font-size: 24px;
+        color: #f1f4f3; }
+      .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-loader-visual span {
+        color: #89938e;
+        font-size: 13px; }
+    .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-mesh-visual .arashtad-pro-mesh {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      width: 160px; }
+      .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-mesh-visual .arashtad-pro-mesh .arashtad-pro-mesh-part {
+        background: #171c1a;
+        border: 1px solid #29312e;
+        border-radius: 3px;
+        padding: 16px 8px;
+        text-align: center;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: #89938e;
+        transition: all 160ms ease; }
+        .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-mesh-visual .arashtad-pro-mesh .arashtad-pro-mesh-part:hover {
+          border-color: #26a38c;
+          color: #f1f4f3;
+          background: #1c2421; }
+      .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-mesh-visual .arashtad-pro-mesh .mesh-head {
+        grid-column: 1 / -1; }
+    @media screen and (max-width: 768px) {
+      .arashtad-pro-features .arashtad-pro-feature .ar-web-wapper {
+        min-height: 300px; } }
+    .arashtad-pro-features .arashtad-pro-feature .ar-web {
+      position: relative;
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .arashtad-pro-features .arashtad-pro-feature .ar-web::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgba(255, 144, 0, 0.5); }
+      .arashtad-pro-features .arashtad-pro-feature .ar-web::after {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(38, 163, 140, 0.1);
+        animation: blink 3s .3s ease-out infinite; }
+      .arashtad-pro-features .arashtad-pro-feature .ar-web li {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 2px dotted #ff9000;
+        background: #202925;
+        color: #ffffff;
+        text-align: center;
+        line-height: 80px;
+        user-select: none; }
+        .arashtad-pro-features .arashtad-pro-feature .ar-web li::after {
+          content: '';
+          position: absolute;
+          z-index: 0;
+          top: 50%;
+          left: 50%;
+          width: 10px;
+          height: 10px;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          background: #26a38c;
+          opacity: .3;
+          animation: expand 6s infinite; }
+        .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+1) {
+          top: -110px;
+          left: -130px;
+          transform: scale(1.1);
+          animation: radiant 3s .3s ease-out infinite; }
+          .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+1)::before {
+            content: '';
+            position: absolute;
+            top: 54px;
+            left: 90px;
+            width: 1px;
+            height: 54px;
+            transform: rotate(-53deg);
+            border-left: 1px dotted #26a38c; }
+          .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+1)::after {
+            animation-delay: .3s; }
+        .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+2) {
+          top: -40px;
+          left: 70px;
+          transform: scale(1.2);
+          animation: radiant 3s .6s ease-out infinite; }
+          .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+2)::before {
+            content: '';
+            position: absolute;
+            top: 17px;
+            left: -24px;
+            width: 1px;
+            height: 44px;
+            transform: rotate(-88deg);
+            border-left: 1px dotted #26a38c; }
+          .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+2)::after {
+            animation-delay: .6s; }
+        .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+3) {
+          top: 40px;
+          left: -80px;
+          transform: scale(0.8);
+          animation: radiant 3s .9s ease-out infinite; }
+          .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+3)::before {
+            content: '';
+            position: absolute;
+            top: -55px;
+            left: 70px;
+            width: 1px;
+            height: 62px;
+            transform: rotate(27deg);
+            border-left: 1px dotted #26a38c; }
+          .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+3)::after {
+            animation-delay: .9s; }
+        .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+4) {
+          top: 0;
+          left: -160px;
+          transform: scale(0.6);
+          animation: radiant 3s 1.2s ease-out infinite; }
+          .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+4)::before {
+            content: '';
+            position: absolute;
+            top: -74px;
+            left: 152px;
+            width: 1px;
+            height: 154px;
+            transform: rotate(72deg);
+            border-left: 1px dotted #26a38c; }
+          .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+4)::after {
+            animation-delay: 1.2s; }
+        .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+5) {
+          top: -140px;
+          left: -20px;
+          transform: scale(0.9);
+          animation: radiant 3s 1.5s ease-out infinite; }
+          .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+5)::before {
+            content: '';
+            position: absolute;
+            top: 78px;
+            left: 25px;
+            width: 1px;
+            height: 68px;
+            transform: rotate(9deg);
+            border-left: 1px dotted #26a38c; }
+          .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+5)::after {
+            animation-delay: 1.5s; }
+        .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+6) {
+          top: 50px;
+          left: 40px;
+          transform: scale(1.4);
+          animation: radiant 3s 1.8s ease-out infinite; }
+          .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+6)::before {
+            content: '';
+            position: absolute;
+            top: -26px;
+            left: -2px;
+            width: 1px;
+            height: 39px;
+            transform: rotate(-41deg);
+            border-left: 1px dotted #26a38c; }
+          .arashtad-pro-features .arashtad-pro-feature .ar-web li:nth-child(n+6)::after {
+            animation-delay: 1.8s; }
+@keyframes expand {
+  0% {
+    width: 5%;
+    height: 5%;
+    opacity: .3; }
+  10% {
+    width: 10%;
+    height: 10%;
+    opacity: .5; }
+  20% {
+    width: 5%;
+    height: 5%;
+    opacity: .3; }
+  30% {
+    width: 10%;
+    height: 10%;
+    opacity: .5; }
+  40% {
+    width: 5%;
+    height: 5%;
+    opacity: .3; }
+  50% {
+    width: 10%;
+    height: 10%;
+    opacity: .5; }
+  60% {
+    width: 5%;
+    height: 5%;
+    opacity: .3; }
+  100% {
+    width: 100%;
+    height: 100%;
+    opacity: 0; } }
+@keyframes blink {
+  0% {
+    background: rgba(57, 182, 159, 0.1); }
+  100% {
+    background: rgba(29, 128, 111, 0.1); } }
+@keyframes radiant {
+  0% {
+    border-color: #ff9000;
+    background: #202925; }
+  50% {
+    border-color: rgba(255, 144, 0, 0.5);
+    background: #0b0e0d; }
+  100% {
+    border-color: #ff9000;
+    background: #1c2421; } }
+    .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-post-processing {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      background: url(../images/arashtad-3d-logo.webp) no-repeat center center;
+      background-size: contain;
+      animation: effectSequence 15s ease-in-out infinite; }
+@keyframes effectSequence {
+  /* Noise */
+  0%, 10% {
+    filter: url("#noise");
+    opacity: 0.3;
+    background-color: transparent;
+    box-shadow: none; }
+  /* Blur */
+  10%, 20% {
+    filter: blur(5px);
+    opacity: 1;
+    background-color: transparent;
+    box-shadow: none; }
+  /* Greyscale */
+  20%, 30% {
+    filter: grayscale(100%);
+    opacity: 1;
+    background-color: transparent;
+    box-shadow: none; }
+  /* Tint */
+  30%, 40% {
+    filter: none;
+    opacity: 1;
+    background-color: rgba(255, 0, 0, 0.4);
+    box-shadow: none; }
+  /* Contrast */
+  40%, 50% {
+    filter: contrast(2);
+    opacity: 1;
+    background-color: transparent;
+    box-shadow: none; }
+  /* Brightness */
+  50%, 60% {
+    filter: brightness(1.8);
+    opacity: 1;
+    background-color: transparent;
+    box-shadow: none; }
+  /* Sepia */
+  60%, 70% {
+    filter: sepia(100%);
+    opacity: 1;
+    background-color: transparent;
+    box-shadow: none; }
+  /* Vignette */
+  70%, 80% {
+    filter: none;
+    opacity: 1;
+    background-color: transparent;
+    box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.9); }
+  /* Pixelate */
+  80%, 90% {
+    filter: blur(3px);
+    opacity: 1;
+    background-color: transparent;
+    box-shadow: none;
+    image-rendering: pixelated; }
+  /* Reset */
+  90%, 100% {
+    filter: none;
+    opacity: 1;
+    background-color: transparent;
+    box-shadow: none;
+    image-rendering: auto; } }
+    @media (max-width: 768px) {
+      .arashtad-pro-features .arashtad-pro-feature {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 40px 24px;
+        text-align: center; }
+        .arashtad-pro-features .arashtad-pro-feature-reverse {
+          direction: ltr; }
+        .arashtad-pro-features .arashtad-pro-feature ul li {
+          text-align: left; }
+        .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-visual-grid {
+          max-width: 240px;
+          margin: 0 auto; }
+        .arashtad-pro-features .arashtad-pro-feature .arashtad-pro-mesh-visual .arashtad-pro-mesh {
+          margin: 0 auto; } }
+  .arashtad-pro-features .arashtad-pro-feature-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 60px 24px;
+    border-top: 1px solid #29312e; }
+    .arashtad-pro-features .arashtad-pro-feature-grid .arashtad-pro-card {
+      transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+      background: #171c1a;
+      border: 1px solid #29312e;
+      border-radius: 4px;
+      padding: 32px; }
+      .arashtad-pro-features .arashtad-pro-feature-grid .arashtad-pro-card:hover {
+        background-color: #1c2421;
+        transform: translateY(-2px); }
+      .arashtad-pro-features .arashtad-pro-feature-grid .arashtad-pro-card .arashtad-pro-card-icon {
+        display: inline-block;
+        font-size: 24px;
+        margin-bottom: 12px;
+        color: #26a38c; }
+      .arashtad-pro-features .arashtad-pro-feature-grid .arashtad-pro-card h2 {
+        font-size: 20px;
+        margin-bottom: 16px; }
+      .arashtad-pro-features .arashtad-pro-feature-grid .arashtad-pro-card ul li {
+        font-size: 13px;
+        padding: 4px 0 4px 20px; }
+    @media (max-width: 768px) {
+      .arashtad-pro-features .arashtad-pro-feature-grid {
+        grid-template-columns: 1fr; } }
+  .arashtad-pro-features .arashtad-pro-builder {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    padding: 60px 24px;
+    border-top: 1px solid #29312e; }
+    .arashtad-pro-features .arashtad-pro-builder .arashtad-pro-section-heading {
+      margin-bottom: 40px; }
+    .arashtad-pro-features .arashtad-pro-builder-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px; }
+    .arashtad-pro-features .arashtad-pro-builder-card {
+      transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+      background: #171c1a;
+      border: 1px solid #29312e;
+      border-radius: 4px;
+      padding: 32px;
+      text-align: center; }
+      .arashtad-pro-features .arashtad-pro-builder-card:hover {
+        background-color: #1c2421;
+        transform: translateY(-2px); }
+      .arashtad-pro-features .arashtad-pro-builder-card .arashtad-pro-builder-icon {
+        display: inline-block;
+        background: #080b0a;
+        border: 1px solid #26a38c;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        line-height: 56px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #26a38c;
+        margin-bottom: 16px; }
+      .arashtad-pro-features .arashtad-pro-builder-card h3 {
+        font-size: 18px;
+        margin-bottom: 8px; }
+      .arashtad-pro-features .arashtad-pro-builder-card p {
+        font-size: 14px;
+        margin-bottom: 16px; }
+      .arashtad-pro-features .arashtad-pro-builder-card strong {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        color: #89938e;
+        background: #080b0a;
+        padding: 4px 16px;
+        border-radius: 3px;
+        letter-spacing: 0.3px; }
+    @media (max-width: 768px) {
+      .arashtad-pro-features .arashtad-pro-builder-grid {
+        grid-template-columns: 1fr; } }
+  .arashtad-pro-features .arashtad-pro-woocommerce {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    padding: 60px 24px;
+    border-top: 1px solid #29312e;
+    align-items: start; }
+    .arashtad-pro-features .arashtad-pro-woocommerce-content h2 {
+      font-size: 28px; }
+    .arashtad-pro-features .arashtad-pro-woocommerce-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px; }
+      .arashtad-pro-features .arashtad-pro-woocommerce-features div {
+        transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+        background: #171c1a;
+        border: 1px solid #29312e;
+        border-radius: 4px;
+        padding: 20px;
+        text-align: center; }
+        .arashtad-pro-features .arashtad-pro-woocommerce-features div:hover {
+          background-color: #1c2421;
+          transform: translateY(-2px); }
+        .arashtad-pro-features .arashtad-pro-woocommerce-features div strong {
+          display: block;
+          color: #f1f4f3;
+          font-size: 14px;
+          margin-bottom: 4px; }
+        .arashtad-pro-features .arashtad-pro-woocommerce-features div span {
+          display: block;
+          color: #89938e;
+          font-size: 12px; }
+    @media (max-width: 768px) {
+      .arashtad-pro-features .arashtad-pro-woocommerce {
+        grid-template-columns: 1fr;
+        text-align: center; }
+        .arashtad-pro-features .arashtad-pro-woocommerce-features {
+          grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) {
+      .arashtad-pro-features .arashtad-pro-woocommerce-features {
+        grid-template-columns: 1fr; } }
+  .arashtad-pro-features .arashtad-pro-cta {
+    text-align: center;
+    padding: 60px 24px 80px;
+    border-top: 1px solid #29312e;
+    background: #0b0e0d; }
+    .arashtad-pro-features .arashtad-pro-cta h2 {
+      font-size: 32px;
+      margin-bottom: 8px; }
+    .arashtad-pro-features .arashtad-pro-cta p {
+      max-width: 480px;
+      margin: 0 auto 28px; }
+  .arashtad-pro-features .arashtad-pro-footer {
+    text-align: center;
+    padding: 24px;
+    border-top: 1px solid #29312e;
+    font-size: 13px;
+    color: #89938e; }
+    .arashtad-pro-features .arashtad-pro-footer strong {
+      display: block;
+      color: #f1f4f3;
+      font-weight: 600;
+      margin-bottom: 4px; }
+
+.button-cta {
+  display: inline-block;
+  padding: 13px 18px;
+  border-radius: 6px;
+  background: #c77305;
+  color: #ffffff !important;
+  font-size: 130%;
+  text-decoration: none !important;
+  transition: all .3s;
+  user-select: none; }
+  .button-cta:hover, .button-cta:focus, .button-cta:active {
+    background: #e88402;
+    box-shadow: 0 0 30px rgba(255, 144, 0, 0.5) !important; }
+
+@media (max-width: 480px) {
+  .arashtad-pro-features h1 {
+    font-size: 28px !important; }
+  .arashtad-pro-features h2 {
+    font-size: 22px !important; }
+  .arashtad-pro-features .arashtad-pro-hero {
+    padding-top: 0; }
+  .arashtad-pro-features .arashtad-pro-cta {
+    padding: 40px 16px 60px; }
+    .arashtad-pro-features .arashtad-pro-cta h2 {
+      font-size: 26px; }
+  .arashtad-pro-features .arashtad-pro-feature,
+  .arashtad-pro-features .arashtad-pro-feature-grid .arashtad-pro-card,
+  .arashtad-pro-features .arashtad-pro-builder-card,
+  .arashtad-pro-features .arashtad-pro-woocommerce-features div {
+    padding: 20px 16px; } }

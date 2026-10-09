@@ -1,0 +1,1031 @@
+# Copyright (C) 2026 Arashtad
+# This file is distributed under the GPL-2.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: Arashtad 3D Annotation 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/arashtad-3d-annotation\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-05T20:42:11+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: arashtad-3d-annotation\n"
+
+#. Plugin Name of the plugin
+#: arashtad-3d-annotation.php
+#: var/js/block.js:8
+#: var/js/block.js:40
+msgid "Arashtad 3D Annotation"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: arashtad-3d-annotation.php
+msgid "https://arashtad.com/arashtad-3d-annotation"
+msgstr ""
+
+#. Description of the plugin
+#: arashtad-3d-annotation.php
+msgid "Display interactive Babylon.js 3D annotation scenes in WordPress."
+msgstr ""
+
+#. Author of the plugin
+#: arashtad-3d-annotation.php
+msgid "Arashtad"
+msgstr ""
+
+#. Author URI of the plugin
+#: arashtad-3d-annotation.php
+msgid "https://arashtad.com"
+msgstr ""
+
+#: opt/admin.php:18
+msgid "3D Annotations"
+msgstr ""
+
+#: opt/admin.php:19
+msgid "3D Annotation"
+msgstr ""
+
+#: opt/admin.php:20
+msgid "Add Annotation"
+msgstr ""
+
+#: opt/admin.php:21
+msgid "Add 3D Annotation"
+msgstr ""
+
+#: opt/admin.php:22
+msgid "Edit 3D Annotation"
+msgstr ""
+
+#: opt/admin.php:23
+msgid "New 3D Annotation"
+msgstr ""
+
+#: opt/admin.php:24
+msgid "View 3D Annotation"
+msgstr ""
+
+#: opt/admin.php:25
+msgid "Search 3D Annotations"
+msgstr ""
+
+#: opt/admin.php:26
+msgid "No 3D Annotations found"
+msgstr ""
+
+#: opt/admin.php:49
+#: opt/admin.php:50
+#: opt/admin.php:1506
+msgid "Pro Features"
+msgstr ""
+
+#: opt/admin.php:107
+msgid "3D Model"
+msgstr ""
+
+#: opt/admin.php:108
+msgid "Preview"
+msgstr ""
+
+#: opt/admin.php:111
+#: opt/admin.php:318
+#: opt/admin.php:691
+msgid "Shortcode"
+msgstr ""
+
+#: opt/admin.php:117
+#: opt/admin.php:1499
+msgid "Resources"
+msgstr ""
+
+#: opt/admin.php:128
+msgid "Model Source"
+msgstr ""
+
+#: opt/admin.php:139
+msgid "Select Model"
+msgstr ""
+
+#: opt/admin.php:143
+#: opt/admin.php:963
+msgid "Clear"
+msgstr ""
+
+#: opt/admin.php:309
+msgid "Save the scene to generate the shortcode."
+msgstr ""
+
+#: opt/admin.php:339
+#: opt/admin.php:703
+msgid "Copy"
+msgstr ""
+
+#: opt/admin.php:350
+#: opt/admin.php:432
+#: opt/admin.php:1363
+msgid "Model Settings"
+msgstr ""
+
+#: opt/admin.php:439
+#: opt/admin.php:968
+#: opt/admin.php:1607
+msgid "Position"
+msgstr ""
+
+#: opt/admin.php:467
+msgid "Babylon.js Vector3 position."
+msgstr ""
+
+#: opt/admin.php:471
+msgid "Rotation"
+msgstr ""
+
+#: opt/admin.php:499
+msgid "Babylon.js Vector3 rotation in radians."
+msgstr ""
+
+#: opt/admin.php:503
+msgid "Scaling"
+msgstr ""
+
+#: opt/admin.php:534
+msgid "Babylon.js Vector3 scaling. Default: 1, 1, 1."
+msgstr ""
+
+#: opt/admin.php:545
+msgid "Enable Model Download"
+msgstr ""
+
+#: opt/admin.php:550
+msgid "Display a download button below the canvas so visitors can download the scene model(s)."
+msgstr ""
+
+#: opt/admin.php:556
+msgid "The source file can be GLB, GLTF, OBJ, STL, PLY, Babylon, or any other format supported by the loaded Babylon.js loaders."
+msgstr ""
+
+#: opt/admin.php:870
+msgid "Wrapper Styles"
+msgstr ""
+
+#: opt/admin.php:910
+msgid "Wrapper Style"
+msgstr ""
+
+#: opt/admin.php:923
+msgid "Enable Scroll Lock"
+msgstr ""
+
+#: opt/admin.php:928
+msgid "Prevent page scrolling while interacting with the 3D canvas."
+msgstr ""
+
+#: opt/admin.php:940
+msgid "Enable Poster"
+msgstr ""
+
+#: opt/admin.php:945
+msgid "Displays a poster image when the page loads. Click the poster to hide it and reveal the 3D scene."
+msgstr ""
+
+#: opt/admin.php:950
+msgid "Poster Image"
+msgstr ""
+
+#: opt/admin.php:962
+msgid "Select Poster"
+msgstr ""
+
+#: opt/admin.php:978
+msgid "Z-Index"
+msgstr ""
+
+#: opt/admin.php:979
+msgid "Top"
+msgstr ""
+
+#: opt/admin.php:980
+msgid "Left"
+msgstr ""
+
+#: opt/admin.php:981
+msgid "Bottom"
+msgstr ""
+
+#: opt/admin.php:982
+msgid "Right"
+msgstr ""
+
+#: opt/admin.php:983
+msgid "Transform"
+msgstr ""
+
+#: opt/admin.php:984
+msgid "Margin"
+msgstr ""
+
+#: opt/admin.php:985
+msgid "Padding"
+msgstr ""
+
+#: opt/admin.php:986
+msgid "Width"
+msgstr ""
+
+#: opt/admin.php:987
+msgid "Max Width"
+msgstr ""
+
+#: opt/admin.php:988
+msgid "Height"
+msgstr ""
+
+#: opt/admin.php:989
+msgid "Max Height"
+msgstr ""
+
+#: opt/admin.php:990
+msgid "Aspect Ratio"
+msgstr ""
+
+#: opt/admin.php:991
+msgid "Border"
+msgstr ""
+
+#: opt/admin.php:992
+msgid "Border Radius"
+msgstr ""
+
+#: opt/admin.php:993
+msgid "Overflow"
+msgstr ""
+
+#: opt/admin.php:994
+msgid "Box Sizing"
+msgstr ""
+
+#: opt/admin.php:995
+msgid "Box Shadow"
+msgstr ""
+
+#: opt/admin.php:996
+msgid "Outline"
+msgstr ""
+
+#: opt/admin.php:1108
+msgid "Invalid scene."
+msgstr ""
+
+#: opt/admin.php:1112
+#: opt/admin.php:1181
+msgid "You are not allowed to edit this scene."
+msgstr ""
+
+#: opt/admin.php:1119
+#: opt/admin.php:1128
+msgid "Invalid annotation data."
+msgstr ""
+
+#: opt/admin.php:1136
+msgid "Untitled"
+msgstr ""
+
+#: opt/admin.php:1143
+msgid "Invalid annotation position."
+msgstr ""
+
+#: opt/admin.php:1187
+msgid "Missing annotation ID."
+msgstr ""
+
+#: opt/admin.php:1204
+msgid "Clear Color"
+msgstr ""
+
+#: opt/admin.php:1221
+msgid "clearColor"
+msgstr ""
+
+#: opt/admin.php:1233
+msgid "Enter RGBA values separated by commas (R, G, B, A). Each value between 0 and 1. Clear color appears on top of the canvas background!"
+msgstr ""
+
+#: opt/admin.php:1268
+#: opt/admin.php:1282
+msgid "Lazy Loading"
+msgstr ""
+
+#: opt/admin.php:1290
+msgid "Enable Lazy Loading"
+msgstr ""
+
+#: opt/admin.php:1295
+msgid "When enabled, the 3D scene will only load when it becomes visible in the viewport. This can improve page load performance."
+msgstr ""
+
+#: opt/admin.php:1328
+msgid "Camera Settings"
+msgstr ""
+
+#: opt/admin.php:1371
+msgid "Camera Type"
+msgstr ""
+
+#: opt/admin.php:1374
+msgid "Arc Rotate Camera"
+msgstr ""
+
+#: opt/admin.php:1375
+msgid "Universal Camera"
+msgstr ""
+
+#: opt/admin.php:1376
+msgid "Free Camera"
+msgstr ""
+
+#: opt/admin.php:1378
+msgid "Select the type of camera to use for the 3D scene."
+msgstr ""
+
+#: opt/admin.php:1383
+msgid "Alpha (radians)"
+msgstr ""
+
+#: opt/admin.php:1386
+msgid "Camera rotation around the target (horizontal). Default: 1.57"
+msgstr ""
+
+#: opt/admin.php:1391
+msgid "Beta (radians)"
+msgstr ""
+
+#: opt/admin.php:1394
+msgid "Camera rotation around the target (vertical). Default: 1.2"
+msgstr ""
+
+#: opt/admin.php:1399
+msgid "Radius"
+msgstr ""
+
+#: opt/admin.php:1402
+msgid "Distance from the target. Default: 12"
+msgstr ""
+
+#: opt/admin.php:1407
+msgid "Target Position"
+msgstr ""
+
+#: opt/admin.php:1414
+msgid "The point the camera looks at. Default: 0, 0, 0"
+msgstr ""
+
+#: opt/admin.php:1419
+msgid "Camera Position"
+msgstr ""
+
+#: opt/admin.php:1426
+msgid "The position of the camera. Default: 0, 0, 3"
+msgstr ""
+
+#: opt/admin.php:1431
+msgid "Field of View (radians)"
+msgstr ""
+
+#: opt/admin.php:1434
+msgid "Camera field of view. Default: 0.4"
+msgstr ""
+
+#: opt/admin.php:1439
+msgid "Min Z"
+msgstr ""
+
+#: opt/admin.php:1442
+msgid "Minimum rendering distance. Default: 0.1"
+msgstr ""
+
+#: opt/admin.php:1447
+msgid "Max Z"
+msgstr ""
+
+#: opt/admin.php:1450
+msgid "Maximum rendering distance. Default: 1000"
+msgstr ""
+
+#: opt/admin.php:1455
+msgid "Auto Rotation"
+msgstr ""
+
+#: opt/admin.php:1459
+msgid "Enable auto rotation"
+msgstr ""
+
+#: opt/admin.php:1465
+msgid "Rotation Speed"
+msgstr ""
+
+#: opt/admin.php:1468
+msgid "Rotation speed when idle. Default: 0.1"
+msgstr ""
+
+#: opt/admin.php:1473
+msgid "Wait Time (ms)"
+msgstr ""
+
+#: opt/admin.php:1476
+msgid "Time to wait before starting rotation. Default: 3000"
+msgstr ""
+
+#: opt/admin.php:1481
+msgid "Spinup Time (ms)"
+msgstr ""
+
+#: opt/admin.php:1484
+msgid "Time to reach full rotation speed. Default: 6000"
+msgstr ""
+
+#: opt/admin.php:1512
+msgid "Upgrade"
+msgstr ""
+
+#: opt/admin.php:1518
+msgid "Demo"
+msgstr ""
+
+#: opt/admin.php:1524
+msgid "Documentation"
+msgstr ""
+
+#: opt/admin.php:1530
+msgid "Tutorials"
+msgstr ""
+
+#: opt/admin.php:1536
+msgid "Powered by"
+msgstr ""
+
+#: opt/admin.php:1538
+msgid "Arashtad 3D Runtime"
+msgstr ""
+
+#: opt/admin.php:1548
+#: opt/admin.php:1576
+msgid "Light Settings"
+msgstr ""
+
+#: opt/admin.php:1582
+msgid "Light Type"
+msgstr ""
+
+#: opt/admin.php:1586
+msgid "Hemispheric Light"
+msgstr ""
+
+#: opt/admin.php:1587
+msgid "Point Light"
+msgstr ""
+
+#: opt/admin.php:1588
+msgid "Directional Light"
+msgstr ""
+
+#: opt/admin.php:1589
+msgid "Spot Light"
+msgstr ""
+
+#: opt/admin.php:1593
+msgid "Select the Babylon.js light type."
+msgstr ""
+
+#: opt/admin.php:1597
+msgid "Direction"
+msgstr ""
+
+#: opt/admin.php:1618
+msgid "Angle"
+msgstr ""
+
+#: opt/admin.php:1624
+msgid "SpotLight cone angle in radians."
+msgstr ""
+
+#: opt/admin.php:1630
+msgid "Exponent"
+msgstr ""
+
+#: opt/admin.php:1636
+msgid "SpotLight falloff exponent."
+msgstr ""
+
+#: opt/admin.php:1641
+msgid "Intensity"
+msgstr ""
+
+#: opt/pro-features.php:15
+#: opt/pro-features.php:506
+msgid "PRO"
+msgstr ""
+
+#: opt/pro-features.php:19
+msgid "Arashtad 3D Annotation Pro"
+msgstr ""
+
+#: opt/pro-features.php:23
+msgid "Turn 3D models into interactive and customizable annotated experiences in WordPress."
+msgstr ""
+
+#: opt/pro-features.php:30
+msgid "Everything in Community, plus advanced annotation styling, rich annotation content, advanced scene control, advanced camera control, advanced lighting, and WooCommerce integration."
+msgstr ""
+
+#: opt/pro-features.php:37
+#: opt/pro-features.php:521
+msgid "Get Arashtad Annotation Pro"
+msgstr ""
+
+#: opt/pro-features.php:56
+msgid "EXPAND YOUR 3D ANNOTATION WORKFLOW"
+msgstr ""
+
+#: opt/pro-features.php:60
+msgid "From 3D Model to Interactive Annotation"
+msgstr ""
+
+#: opt/pro-features.php:69
+msgid "Load"
+msgstr ""
+
+#: opt/pro-features.php:70
+msgid "Model"
+msgstr ""
+
+#: opt/pro-features.php:75
+msgid "Annotate"
+msgstr ""
+
+#: opt/pro-features.php:76
+msgid "Points"
+msgstr ""
+
+#: opt/pro-features.php:81
+msgid "Style"
+msgstr ""
+
+#: opt/pro-features.php:82
+msgid "Annotations"
+msgstr ""
+
+#: opt/pro-features.php:87
+msgid "Control"
+msgstr ""
+
+#: opt/pro-features.php:88
+msgid "Scene"
+msgstr ""
+
+#: opt/pro-features.php:93
+msgid "Customize"
+msgstr ""
+
+#: opt/pro-features.php:94
+msgid "Content"
+msgstr ""
+
+#: opt/pro-features.php:99
+msgid "Sell"
+msgstr ""
+
+#: opt/pro-features.php:100
+msgid "WooCommerce"
+msgstr ""
+
+#: opt/pro-features.php:119
+msgid "ANNOTATION STYLING"
+msgstr ""
+
+#: opt/pro-features.php:123
+msgid "Style Points, Labels, Lines, and Cards"
+msgstr ""
+
+#: opt/pro-features.php:127
+msgid "Take complete control over the visual appearance of annotation points, labels, connector lines, and annotation cards."
+msgstr ""
+
+#: opt/pro-features.php:134
+msgid "Annotation point diameter"
+msgstr ""
+
+#: opt/pro-features.php:135
+msgid "Annotation point diffuse color"
+msgstr ""
+
+#: opt/pro-features.php:136
+msgid "Annotation point emissive color"
+msgstr ""
+
+#: opt/pro-features.php:137
+msgid "Annotation point opacity"
+msgstr ""
+
+#: opt/pro-features.php:138
+#: opt/pro-features.php:249
+msgid "Create labels for annotation points"
+msgstr ""
+
+#: opt/pro-features.php:139
+msgid "Label border, border radius, box shadow, and outline"
+msgstr ""
+
+#: opt/pro-features.php:140
+msgid "Label background color and text color"
+msgstr ""
+
+#: opt/pro-features.php:141
+msgid "Annotation line fill color and thickness"
+msgstr ""
+
+#: opt/pro-features.php:142
+msgid "Annotation card padding, border, and border radius"
+msgstr ""
+
+#: opt/pro-features.php:143
+msgid "Annotation card background color, blur, filter, box shadow, and outline"
+msgstr ""
+
+#: opt/pro-features.php:144
+msgid "Annotation card text color"
+msgstr ""
+
+#: opt/pro-features.php:152
+msgid "POINTS"
+msgstr ""
+
+#: opt/pro-features.php:153
+msgid "LINES"
+msgstr ""
+
+#: opt/pro-features.php:154
+msgid "CARDS"
+msgstr ""
+
+#: opt/pro-features.php:155
+#: opt/pro-features.php:226
+msgid "LABELS"
+msgstr ""
+
+#: opt/pro-features.php:156
+#: opt/pro-features.php:205
+msgid "HTML"
+msgstr ""
+
+#: opt/pro-features.php:157
+msgid "MEDIA"
+msgstr ""
+
+#: opt/pro-features.php:172
+#: opt/pro-features.php:274
+msgid "ANNOTATION CARD FEATURES"
+msgstr ""
+
+#: opt/pro-features.php:176
+msgid "Add Rich Content to Annotation Cards"
+msgstr ""
+
+#: opt/pro-features.php:180
+msgid "Use annotation cards to present rich media and custom content directly alongside your 3D annotations."
+msgstr ""
+
+#: opt/pro-features.php:187
+msgid "Video content"
+msgstr ""
+
+#: opt/pro-features.php:188
+msgid "Audio content"
+msgstr ""
+
+#: opt/pro-features.php:189
+msgid "Image content"
+msgstr ""
+
+#: opt/pro-features.php:190
+msgid "Custom HTML content"
+msgstr ""
+
+#: opt/pro-features.php:191
+msgid "Show cards on initialization"
+msgstr ""
+
+#: opt/pro-features.php:192
+msgid "Show cards on click"
+msgstr ""
+
+#: opt/pro-features.php:193
+#: opt/pro-features.php:284
+msgid "Allow empty titles"
+msgstr ""
+
+#: opt/pro-features.php:201
+msgid "TEXT"
+msgstr ""
+
+#: opt/pro-features.php:202
+msgid "IMAGE"
+msgstr ""
+
+#: opt/pro-features.php:203
+msgid "VIDEO"
+msgstr ""
+
+#: opt/pro-features.php:204
+msgid "AUDIO"
+msgstr ""
+
+#: opt/pro-features.php:206
+msgid "ACTION"
+msgstr ""
+
+#: opt/pro-features.php:221
+msgid "A"
+msgstr ""
+
+#: opt/pro-features.php:222
+msgid "B"
+msgstr ""
+
+#: opt/pro-features.php:223
+msgid "C"
+msgstr ""
+
+#: opt/pro-features.php:224
+msgid "D"
+msgstr ""
+
+#: opt/pro-features.php:225
+msgid "E"
+msgstr ""
+
+#: opt/pro-features.php:234
+msgid "ANNOTATION LABELS"
+msgstr ""
+
+#: opt/pro-features.php:238
+msgid "Add Labels to Annotation Points"
+msgstr ""
+
+#: opt/pro-features.php:242
+msgid "Create labels for annotation points and control their visual appearance with dedicated label styling options."
+msgstr ""
+
+#: opt/pro-features.php:250
+msgid "Label border"
+msgstr ""
+
+#: opt/pro-features.php:251
+msgid "Label border radius"
+msgstr ""
+
+#: opt/pro-features.php:252
+msgid "Label box shadow"
+msgstr ""
+
+#: opt/pro-features.php:253
+msgid "Label outline"
+msgstr ""
+
+#: opt/pro-features.php:254
+msgid "Label background color"
+msgstr ""
+
+#: opt/pro-features.php:255
+msgid "Label text color"
+msgstr ""
+
+#: opt/pro-features.php:278
+msgid "Rich Annotation Content"
+msgstr ""
+
+#: opt/pro-features.php:282
+msgid "Video, audio, image, and custom HTML content"
+msgstr ""
+
+#: opt/pro-features.php:283
+msgid "Show cards on initialization or click"
+msgstr ""
+
+#: opt/pro-features.php:298
+#: opt/pro-features.php:369
+msgid "VIEWER"
+msgstr ""
+
+#: opt/pro-features.php:302
+#: opt/pro-features.php:373
+msgid "Customize the Loading Experience"
+msgstr ""
+
+#: opt/pro-features.php:306
+#: opt/pro-features.php:384
+msgid "Preloader customization"
+msgstr ""
+
+#: opt/pro-features.php:321
+msgid "SCENE"
+msgstr ""
+
+#: opt/pro-features.php:322
+msgid ".env/.hdr"
+msgstr ""
+
+#: opt/pro-features.php:323
+msgid "ENVIRONMENT"
+msgstr ""
+
+#: opt/pro-features.php:324
+msgid "CANVAS"
+msgstr ""
+
+#: opt/pro-features.php:325
+msgid "CSS"
+msgstr ""
+
+#: opt/pro-features.php:326
+msgid "CONTROL"
+msgstr ""
+
+#: opt/pro-features.php:334
+msgid "ADVANCED SCENE CONTROL"
+msgstr ""
+
+#: opt/pro-features.php:338
+msgid "Control the 3D Scene"
+msgstr ""
+
+#: opt/pro-features.php:342
+msgid "Extend individual scenes with advanced canvas styling, background images, and environment controls."
+msgstr ""
+
+#: opt/pro-features.php:349
+msgid "Custom CSS for canvas and all objects inside"
+msgstr ""
+
+#: opt/pro-features.php:350
+msgid "Canvas background image"
+msgstr ""
+
+#: opt/pro-features.php:351
+msgid ".env / .hdr environments"
+msgstr ""
+
+#: opt/pro-features.php:352
+msgid "Environment intensity"
+msgstr ""
+
+#: opt/pro-features.php:353
+msgid "Environment background blur"
+msgstr ""
+
+#: opt/pro-features.php:354
+msgid "Environment rotation Y"
+msgstr ""
+
+#: opt/pro-features.php:377
+msgid "Give visitors a polished loading experience with customizable preloader behavior."
+msgstr ""
+
+#: opt/pro-features.php:394
+msgid "Loading"
+msgstr ""
+
+#: opt/pro-features.php:413
+msgid "ADVANCED LIGHTING"
+msgstr ""
+
+#: opt/pro-features.php:417
+msgid "Build Flexible Lighting Setups"
+msgstr ""
+
+#: opt/pro-features.php:421
+msgid "Multiple lights"
+msgstr ""
+
+#: opt/pro-features.php:422
+msgid "Multiple light types"
+msgstr ""
+
+#: opt/pro-features.php:423
+msgid "Light color"
+msgstr ""
+
+#: opt/pro-features.php:424
+msgid "Light intensity"
+msgstr ""
+
+#: opt/pro-features.php:438
+msgid "ADVANCED CAMERA CONTROL"
+msgstr ""
+
+#: opt/pro-features.php:442
+msgid "Fine-Tune Camera Interaction"
+msgstr ""
+
+#: opt/pro-features.php:446
+msgid "Zoom speed (wheelPrecision)"
+msgstr ""
+
+#: opt/pro-features.php:447
+msgid "Zoom delta percentage"
+msgstr ""
+
+#: opt/pro-features.php:448
+msgid "Wheel precision X, Y, and Z"
+msgstr ""
+
+#: opt/pro-features.php:463
+msgid "WOOCOMMERCE"
+msgstr ""
+
+#: opt/pro-features.php:467
+msgid "Add Interactive Annotations to Products"
+msgstr ""
+
+#: opt/pro-features.php:471
+msgid "Connect WooCommerce products with 3D models and use interactive annotations to provide customers with richer product information."
+msgstr ""
+
+#: opt/pro-features.php:482
+msgid "3D Integration"
+msgstr ""
+
+#: opt/pro-features.php:483
+msgid "Connect WooCommerce products with 3D models"
+msgstr ""
+
+#: opt/pro-features.php:487
+msgid "Gallery Replacement"
+msgstr ""
+
+#: opt/pro-features.php:488
+msgid "Replace product images or galleries with 3D models"
+msgstr ""
+
+#: opt/pro-features.php:492
+msgid "Variations"
+msgstr ""
+
+#: opt/pro-features.php:493
+msgid "Assign models to individual product variations"
+msgstr ""
+
+#: opt/pro-features.php:510
+msgid "Take Your 3D Annotations Further"
+msgstr ""
+
+#: opt/pro-features.php:514
+msgid "Unlock advanced annotation styling, rich annotation content, scene control, advanced camera control, advanced lighting, and WooCommerce integration."
+msgstr ""
+
+#: opt/pro-features.php:532
+msgid "Powered by Babylon.js"
+msgstr ""
+
+#: opt/pro-features.php:536
+msgid "No telemetry · No tracking · No hidden requests"
+msgstr ""
+
+#: opt/shortcode.php:169
+msgid "Download Model"
+msgstr ""
+
+#: var/js/admin.js:1092
+msgid "Select 3D Model"
+msgstr ""
+
+#: var/js/admin.js:1094
+msgid "Use This Model"
+msgstr ""
+
+#: var/js/admin.js:1155
+msgid "Copied"
+msgstr ""
+
+#: var/js/admin.js:1306
+msgid "Select Poster Image"
+msgstr ""
+
+#: var/js/admin.js:1307
+msgid "Use Poster"
+msgstr ""
+
+#: var/js/block.js:9
+msgid "Insert an Arashtad 3D Annotation."
+msgstr ""
+
+#: var/js/block.js:33
+msgid "Select a 3D Annotation"
+msgstr ""
+
+#: var/js/block.js:54
+msgid "Remove Loader"
+msgstr ""

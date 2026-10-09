@@ -1,0 +1,2248 @@
+// Arashtad Admin
+
+$arashtad-bg: #161616;
+$arashtad-bg-dark: #181818;
+$arashtad-bg-deep: #0e0e0e;
+$arashtad-bg-light: #272727;
+$arashtad-bg-hover: #272727;
+$arashtad-bg-active: #2c2c2c;
+$grid-line: lighten($arashtad-bg-light, 22%);
+$arashtad-border: #313131;
+$arashtad-border-light: #3f3f3f;
+$arashtad-text: #d2d8d5;
+$arashtad-text-muted: #89938e;
+$arashtad-white: #f1f4f3;
+$arashtad-primary: #288876;
+$arashtad-primary-dark: #1d806f;
+$arashtad-primary-light: #31a18c;
+$arashtad-secondary: #ff9000;
+$arashtad-secondary-dark: #c96f00;
+$arashtad-danger: #c95c5c;
+$arashtad-danger-light: #df7474;
+$arashtad-dark: #000000;
+$arashtad-light: #ffffff;
+$arashtad-radius: 4px;
+$arashtad-radius-small: 3px;
+$arashtad-transition: 160ms ease;
+
+::selection {
+    background-color: $arashtad-border-light;
+    color: $arashtad-white;
+}
+
+.arashtad-model-settings {
+    max-width: 1200px;
+}
+
+.arashtad-model-url,
+.arashtad-model-media {
+    margin-top: 15px;
+}
+
+.arashtad-camera-settings {
+    .form-table th {
+        width: 150px;
+    }
+
+    .vector-inputs {
+        display: flex;
+        gap: 5px;
+    }
+
+    .vector-inputs input {
+        text-align: center;
+    }
+
+    .description {
+        font-style: italic;
+        color: #666;
+        margin-top: 3px;
+    }
+
+    .camera-field {
+        transition: opacity 0.3s ease;
+    }
+
+    .camera-field[style*="display:none"] {
+        opacity: 0;
+    }
+}
+
+.arashtad-3d-annotation-light-settings {
+    .vector-inputs {
+        display: flex;
+        gap: 5px;
+    }
+
+    .vector-inputs input {
+        width: 33.333%;
+        text-align: center;
+    }
+
+    .description {
+        font-style: italic;
+        color: #666;
+        margin-top: 3px;
+    }
+
+    input[type="number"],
+    select {
+        box-sizing: border-box;
+    }
+
+    p {
+        margin-bottom: 8px;
+    }
+}
+
+#arashtad-poster-settings {
+    display: none;
+
+    &.enabled {
+        display: block;
+    }
+}
+
+#arashtad-poster-preview {
+    display: none;
+
+    &.has-image {
+        display: block;
+    }
+}
+
+.arashtad-poster-preview-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// Assets
+
+.hide-scrollbar {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.arashtad-3d-logo {
+    background: url(../images/arashtad-3d-logo.webp) no-repeat center center;
+    background-size: contain;
+}
+
+.ar-flexbox {
+    display: flex;
+
+    .flex {
+        &-1 {
+            flex: 1;
+        }
+        &-2 {
+            flex: 2;
+        }
+        &-3 {
+            flex: 3;
+        }
+        &-4 {
+            flex: 4;
+        }
+        &-5 {
+            flex: 5;
+        }
+        &-6 {
+            flex: 6;
+        }
+    }
+
+    table {
+        align-self: flex-start;
+
+        th, td {
+            vertical-align: top;
+        }
+    }
+}
+
+.ar-vertical-spacer {
+    width: 10px;
+    margin-right: 20px;
+    border-right: 1px solid $arashtad-border;
+}
+
+.ar-spacer {
+    height: 10px;
+}
+
+.text {
+    &-center {
+        text-align: center;
+    }
+    &-left {
+        text-align: left;
+    }
+    &-right {
+        text-align: right;
+    }
+    &-justify {
+        text-align: justify;
+    }
+}
+
+@media (min-width: 1201px) {
+    .hide-in-desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .ar-flexbox {
+        display: block;
+    }
+
+    .ar-vertical-spacer {
+        display: none;
+    }
+
+    .text {
+        &-center-tablet {
+            text-align: center;
+        }
+        &-left-tablet {
+            text-align: left;
+        }
+        &-right-tablet {
+            text-align: right;
+        }
+        &-justify-tablet {
+            text-align: justify;
+        }
+    }
+}
+
+.ar-radio-group {
+    display: flex;
+    margin: 0 auto;
+    width: 450px;
+    max-width: 100%;
+
+    label {
+        flex: 1;
+        position: relative;
+        padding: 10px 14px;
+        border: 1px solid $arashtad-border-light;
+        background: $arashtad-bg-dark;
+        color: $arashtad-text;
+        cursor: pointer;
+        transition: background-color $arashtad-transition, border-color $arashtad-transition, color $arashtad-transition;
+        text-align: center;
+
+        &:has(input[type="radio"]:checked) {
+            background: $arashtad-primary;
+            border-color: $arashtad-primary;
+            color: #07100e;
+        }
+
+        &:hover {
+            background: $arashtad-bg-hover;
+            border-color: $arashtad-primary;
+            color: $arashtad-white;
+        }
+
+        &:has(input[type="radio"]:checked):hover {
+            background: $arashtad-primary-light;
+            border-color: $arashtad-primary-light;
+            color: #06100d;
+        }
+
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            margin: 0;
+            pointer-events: none;
+
+            &:focus,
+            &:focus-visible {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        &:first-child {
+            border-radius: $arashtad-radius 0 0 $arashtad-radius;
+        }
+
+        &:not(:first-child) {
+            margin-left: -1px;
+        }
+
+        &:last-child {
+            border-radius: 0 $arashtad-radius $arashtad-radius 0;
+        }
+    }
+}
+
+// Base
+
+body.arashtad-admin {
+    background: $arashtad-bg-deep;
+    color: $arashtad-text;
+
+    #wpcontent,
+    #wpbody-content {
+        background: $arashtad-bg-deep;
+        color: $arashtad-text;
+    }
+
+    #wpfooter {
+        background: $arashtad-bg-deep;
+        border-top: 1px solid $arashtad-border;
+        color: $arashtad-text-muted;
+
+        a {
+            color: $arashtad-primary;
+
+            &:hover {
+                color: $arashtad-primary-light;
+            }
+
+            &:focus,
+            &:active {
+                color: $arashtad-primary-light;
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    #screen-meta {
+        border-color: $arashtad-border;
+        
+        #screen-options-wrap {
+            background: $arashtad-bg-deep;
+            color: $arashtad-text-muted;
+        }
+    }
+
+    #screen-meta-links {
+        .show-settings {
+            border-color: $arashtad-border;
+            background: $arashtad-bg-deep;
+            color: $arashtad-text-muted;
+        }
+    }
+
+    #titlediv {
+        #title {
+            background: $arashtad-bg-dark;
+            color: $arashtad-text;
+        }
+
+
+    }
+
+    #wp-media-modal {
+        border: 1px solid $arashtad-border;
+        background: $arashtad-bg-deep;
+        color: $arashtad-text-muted;
+
+        .media-modal-content,
+        .media-toolbar,
+        .media-frame-content {
+            border-color: $arashtad-border;
+            background: $arashtad-bg-deep;
+            color: $arashtad-text-muted;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: $arashtad-text;
+        }
+
+        .media-sidebar {
+            border-color: $arashtad-border;
+            background: $arashtad-bg-dark;
+            
+            .attachment-info {
+                border-color: $arashtad-border;
+            }
+        }
+
+        .media-frame-router {
+            .media-router {
+                .media-menu-item {
+                    margin-top: -5px;
+                    padding-bottom: 0;
+                    border-radius: 5px 5px 0 0;
+
+                    &:active,
+                    &:focus,
+                    &.active {
+                        background: $arashtad-bg-deep;
+                        border-color: $arashtad-border;
+                        border-bottom: none;
+                        box-shadow: none !important;
+                        
+                        &:last-child {
+                            border-color: $arashtad-border;
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .wp-core-ui {
+        .attachment {
+            &:focus,
+            &:active,
+            &.details {
+                box-shadow: inset 0 0 0 3px $arashtad-bg-active, inset 0 0 0 7px $arashtad-primary-dark;
+
+                .check {
+                    background: $arashtad-primary;
+                    box-shadow: inset 0 0 0 3px $arashtad-bg-active, inset 0 0 0 7px $arashtad-primary-dark;
+                }
+            }
+        }
+    }
+
+    .postbox-header {
+        display: flex !important;
+        border-color: $arashtad-border;
+    }
+
+    #major-publishing-actions {
+        border-color: $arashtad-border;
+        background: $arashtad-bg-dark;
+    }
+
+    .widefat tfoot td,
+    .widefat tfoot th {
+        border-color: $arashtad-border;
+    }
+
+    a {
+        color: $arashtad-primary;
+        transition: color $arashtad-transition, border-color $arashtad-transition, background-color $arashtad-transition;
+
+        &:hover {
+            color: $arashtad-primary-light;
+        }
+
+        &:focus,
+        &:active {
+            color: $arashtad-primary-light;
+            outline: none;
+            box-shadow: 0 0 0 1px $arashtad-primary;
+        }
+    }
+
+    hr {
+        height: 1px;
+        margin: 20px 0;
+        border: 0;
+        border-top: 1px solid $arashtad-border;
+        background: transparent;
+    }
+
+    .wrap {
+        color: $arashtad-text;
+
+        > h1,
+        > h2.wp-heading-inline {
+            color: $arashtad-white;
+            font-weight: 500;
+            letter-spacing: .02em;
+        }
+
+        > h1 {
+            margin-bottom: 18px;
+        }
+    }
+}
+
+// Admin Menu
+
+body.arashtad-admin {
+    #adminmenuback,
+    #adminmenuwrap,
+    #adminmenu {
+        background: $arashtad-bg-dark;
+    }
+
+    #adminmenu {
+        border-right: 1px solid $arashtad-border;
+
+        a {
+            color: $arashtad-text-muted;
+
+            &:hover,
+            &:focus {
+                background: $arashtad-bg-hover;
+                color: $arashtad-white;
+                box-shadow: none;
+                outline: none;
+            }
+        }
+
+        .wp-has-current-submenu > a.wp-has-current-submenu,
+        .wp-has-current-submenu > a.current,
+        .current a.menu-top,
+        .wp-menu-open a.menu-top {
+            background: $arashtad-bg-light;
+            color: $arashtad-white;
+            box-shadow: inset 3px 0 0 $arashtad-primary;
+        }
+
+        .wp-submenu {
+            background: $arashtad-bg-deep;
+
+            a {
+                color: $arashtad-text-muted;
+
+                &:hover,
+                &:focus {
+                    background: $arashtad-bg-hover;
+                    color: $arashtad-primary-light;
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+        }
+
+        .wp-menu-arrow {
+            display: none;
+        }
+    }
+}
+
+// Buttons
+
+body.arashtad-admin {
+    .button,
+    .button-secondary,
+    .button-primary,
+    button,
+    input[type="submit"],
+    input[type="button"],
+    input[type="reset"] {
+        min-height: 32px;
+        padding: 0 13px;
+        border: 1px solid $arashtad-border-light;
+        border-radius: $arashtad-radius;
+        background: $arashtad-bg-light;
+        color: $arashtad-text !important;
+        box-shadow: none;
+        text-shadow: none;
+        font-weight: 500;
+        line-height: 34px;
+        user-select: none;
+        transition: background-color $arashtad-transition, border-color $arashtad-transition, color $arashtad-transition, box-shadow $arashtad-transition, transform $arashtad-transition;
+
+        &:hover {
+            border-color: $arashtad-primary;
+            background: $arashtad-bg-hover;
+            color: $arashtad-white;
+            box-shadow: none;
+        }
+
+        &:focus,
+        &:focus-visible {
+            border-color: $arashtad-primary;
+            background: $arashtad-bg-hover;
+            color: $arashtad-white;
+            outline: none;
+            box-shadow: 0 0 0 1px $arashtad-primary !important;
+        }
+
+        &:active {
+            border-color: $arashtad-primary-dark;
+            background: $arashtad-bg-active;
+            color: $arashtad-white;
+            outline: none;
+            box-shadow: none !important;
+            transform: translateY(1px);
+        }
+
+        &:disabled,
+        &.disabled {
+            border-color: $arashtad-border;
+            background: $arashtad-bg-dark;
+            color: $arashtad-text-muted;
+            opacity: .45;
+            cursor: not-allowed;
+        }
+    }
+
+    .button-primary {
+        border-color: $arashtad-primary-dark;
+        background: $arashtad-primary;
+        color: #07100e;
+
+        &:hover {
+            border-color: $arashtad-primary-light;
+            background: $arashtad-primary-light;
+            color: #06100d;
+        }
+
+        &:focus,
+        &:focus-visible {
+            border-color: $arashtad-primary-light;
+            background: $arashtad-primary;
+            color: #07100e;
+            box-shadow: 0 0 0 1px $arashtad-primary-light !important;
+        }
+
+        &:active {
+            border-color: $arashtad-primary-dark;
+            background: $arashtad-primary-dark;
+            color: $arashtad-white;
+        }
+    }
+
+    .button-link {
+        min-height: auto;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: $arashtad-primary;
+        box-shadow: none;
+
+        &:hover,
+        &:focus,
+        &:active {
+            border: 0;
+            background: transparent;
+            color: $arashtad-primary-light;
+            box-shadow: none !important;
+            transform: none;
+        }
+    }
+
+    .submitdelete,
+    .button-link-delete {
+        color: $arashtad-danger;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $arashtad-danger-light;
+        }
+    }
+}
+
+// Page Title Action
+
+body.arashtad-admin {
+    .page-title-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: auto;
+        margin-left: 8px;
+        padding: 0 13px;
+        border: 1px solid $arashtad-primary-dark !important;
+        border-radius: $arashtad-radius;
+        background: $arashtad-primary !important;
+        color: #07100e !important;
+        box-shadow: none !important;
+        text-shadow: none;
+        font-weight: 600;
+        line-height: 30px;
+        text-decoration: none;
+
+        &:hover {
+            border-color: $arashtad-primary-light !important;
+            background: $arashtad-primary-light !important;
+            color: #06100d !important;
+        }
+
+        &:focus,
+        &:focus-visible {
+            border-color: $arashtad-primary-light !important;
+            background: $arashtad-primary !important;
+            color: #07100e !important;
+            outline: none !important;
+            box-shadow: 0 0 0 1px $arashtad-primary-light !important;
+        }
+
+        &:active {
+            border-color: $arashtad-primary-dark !important;
+            background: $arashtad-primary-dark !important;
+            color: $arashtad-white !important;
+            box-shadow: none !important;
+        }
+    }
+}
+
+// Form Controls
+
+body.arashtad-admin {
+    input[type="text"],
+    input[type="search"],
+    input[type="email"],
+    input[type="url"],
+    input[type="number"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="time"],
+    input[type="datetime-local"],
+    textarea,
+    select {
+        min-height: 36px;
+        border: 1px solid $arashtad-border-light;
+        border-radius: $arashtad-radius-small;
+        background: $arashtad-bg-dark;
+        color: $arashtad-text;
+        box-shadow: none;
+        transition: border-color $arashtad-transition, background-color $arashtad-transition, color $arashtad-transition, box-shadow $arashtad-transition;
+
+        &:hover {
+            border-color: $arashtad-primary-dark;
+            color: $arashtad-text;
+        }
+
+        &:focus,
+        &:focus-visible {
+            border-color: $arashtad-primary;
+            background: $arashtad-bg-deep;
+            color: $arashtad-white;
+            outline: none;
+            box-shadow: 0 0 0 1px $arashtad-primary !important;
+        }
+
+        &:disabled {
+            border-color: $arashtad-border;
+            background: $arashtad-bg-dark;
+            color: $arashtad-text-muted;
+            opacity: .45;
+        }
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: $arashtad-text-muted;
+        opacity: .8;
+    }
+
+    select {
+        option {
+            background: $arashtad-bg-dark;
+            color: $arashtad-text;
+
+            &:checked,
+            &:hover {
+                background: $arashtad-primary;
+                color: #07100e;
+            }
+        }
+    }
+
+    label {
+        color: $arashtad-text;
+    }
+
+    .description,
+    p.description {
+        color: $arashtad-text-muted;
+    }
+}
+
+// Checkboxes / Radios
+
+body.arashtad-admin {
+    input[type="checkbox"],
+    input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        margin: 0 5px 0 0;
+        border: 1px solid $arashtad-border-light;
+        background: $arashtad-bg-dark;
+        box-shadow: none;
+        transition: border-color $arashtad-transition, background-color $arashtad-transition, box-shadow $arashtad-transition;
+
+        &:hover {
+            border-color: $arashtad-primary;
+        }
+
+        &:focus,
+        &:focus-visible {
+            border-color: $arashtad-primary;
+            outline: none;
+            box-shadow: 0 0 0 1px $arashtad-primary !important;
+        }
+
+        &:checked {
+            border-color: $arashtad-primary;
+            background-color: $arashtad-primary;
+        }
+    }
+
+    input[type="radio"] {
+        border-radius: 50%;
+    }
+
+    input[type="checkbox"] {
+        border-radius: $arashtad-radius-small;
+    }
+}
+
+// 3D Model Radio Button Group
+
+body.arashtad-admin {
+    .arashtad-model-type-group {
+        display: flex;
+        width: 100%;
+        margin: 0;
+
+        label {
+            position: relative;
+            flex: 1 1 0;
+            margin: 0;
+            cursor: pointer;
+
+            input[type="radio"] {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                opacity: 0;
+                pointer-events: none;
+
+                &:checked + span {
+                    border-color: $arashtad-primary;
+                    background: $arashtad-primary;
+                    color: #07100e;
+                }
+
+                &:focus-visible + span {
+                    z-index: 2;
+                    border-color: $arashtad-primary-light;
+                    box-shadow: 0 0 0 1px $arashtad-primary-light;
+                }
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 36px;
+                padding: 0 12px;
+                border: 1px solid $arashtad-border-light;
+                background: $arashtad-bg-dark;
+                color: $arashtad-text;
+                text-align: center;
+                transition: background-color $arashtad-transition, border-color $arashtad-transition, color $arashtad-transition;
+
+                &:hover {
+                    border-color: $arashtad-primary-dark;
+                    background: $arashtad-bg-hover;
+                    color: $arashtad-white;
+                }
+            }
+
+            &:first-child span {
+                border-radius: $arashtad-radius 0 0 $arashtad-radius;
+            }
+
+            &:not(:first-child) span {
+                margin-left: -1px;
+            }
+
+            &:last-child span {
+                border-radius: 0 $arashtad-radius $arashtad-radius 0;
+            }
+        }
+    }
+}
+
+// Meta Boxes
+
+body.arashtad-admin {
+    .postbox {
+        position: relative;
+        margin-bottom: 18px;
+        border: 1px solid $arashtad-border;
+        border-radius: $arashtad-radius;
+        background: $arashtad-bg-light;
+        color: $arashtad-text;
+        box-shadow: none;
+        overflow: hidden;
+
+        .hndle {
+            padding: 12px 14px;
+            border-bottom: 1px solid $arashtad-border;
+            background: $arashtad-bg-dark;
+            color: $arashtad-white;
+            font-weight: 500;
+            letter-spacing: .025em;
+        }
+
+        .handlediv {
+            color: $arashtad-text-muted;
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background: transparent;
+                color: $arashtad-primary;
+                border: 0;
+                outline: none;
+                box-shadow: none !important;
+            }
+        }
+
+        .inside {
+            margin: 0;
+            padding: 18px;
+            color: $arashtad-text;
+
+            > .submit,
+            > p.submit {
+                margin: 18px -18px -18px;
+                padding: 14px 18px;
+                border-top: 1px solid $arashtad-border;
+                background: $arashtad-bg-dark;
+            }
+
+            .button,
+            .button-secondary,
+            button {
+                background: $arashtad-bg-dark;
+                border-color: $arashtad-border-light;
+                color: $arashtad-text;
+
+                &:hover {
+                    background: $arashtad-bg-hover;
+                    border-color: $arashtad-primary;
+                    color: $arashtad-white;
+                }
+
+                &:focus,
+                &:focus-visible {
+                    background: $arashtad-bg-hover;
+                    border-color: $arashtad-primary;
+                    color: $arashtad-white;
+                    box-shadow: 0 0 0 1px $arashtad-primary !important;
+                    outline: none;
+                }
+
+                &:active {
+                    background: $arashtad-bg-active;
+                    border-color: $arashtad-primary-dark;
+                    color: $arashtad-white;
+                    box-shadow: none !important;
+                }
+            }
+
+            .button-primary {
+                background: $arashtad-primary;
+                border-color: $arashtad-primary-dark;
+                color: #07100e;
+
+                &:hover {
+                    background: $arashtad-primary-light;
+                    border-color: $arashtad-primary-light;
+                    color: #06100d;
+                }
+
+                &:focus,
+                &:focus-visible {
+                    background: $arashtad-primary;
+                    border-color: $arashtad-primary-light;
+                    color: #07100e;
+                    box-shadow: 0 0 0 1px $arashtad-primary-light !important;
+                }
+
+                &:active {
+                    background: $arashtad-primary-dark;
+                    border-color: $arashtad-primary-dark;
+                    color: $arashtad-white;
+                }
+            }
+        }
+
+        &.closed {
+            .hndle {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+// CPT List Table
+
+body.arashtad-admin {
+    .wp-list-table {
+        border: 1px solid $arashtad-border;
+        border-radius: $arashtad-radius;
+        background: $arashtad-bg-light;
+        color: $arashtad-text;
+        box-shadow: none;
+        overflow: hidden;
+
+        thead,
+        tfoot {
+            background: $arashtad-bg-dark;
+        }
+
+        th,
+        td {
+            border-bottom: 1px solid $arashtad-border;
+            color: $arashtad-text;
+        }
+
+        th {
+            color: $arashtad-text-muted;
+            font-weight: 500;
+
+            a {
+                color: $arashtad-text-muted;
+
+                &:hover {
+                    color: $arashtad-primary-light;
+                }
+
+                &:focus,
+                &:active {
+                    color: $arashtad-primary-light;
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                background: $arashtad-bg-light;
+                transition: background-color $arashtad-transition;
+
+                &:hover {
+                    background: $arashtad-bg-hover;
+                }
+
+                &:last-child {
+                    td {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .row-title {
+            color: $arashtad-primary;
+            font-weight: 500;
+
+            &:hover {
+                color: $arashtad-primary-light;
+            }
+
+            &:focus,
+            &:active {
+                color: $arashtad-primary-light;
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        .column-primary {
+            color: $arashtad-white;
+        }
+
+        .check-column {
+            width: 32px;
+        }
+
+        input[type="checkbox"] {
+            margin-top: 0;
+        }
+    }
+
+    .row-actions {
+        color: $arashtad-text-muted;
+
+        a {
+            color: $arashtad-primary;
+
+            &:hover {
+                color: $arashtad-primary-light;
+            }
+
+            &:focus,
+            &:active {
+                color: $arashtad-primary-light;
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        .trash,
+        .delete {
+            a {
+                color: $arashtad-danger;
+
+                &:hover {
+                    color: $arashtad-danger-light;
+                }
+            }
+        }
+    }
+}
+
+// Bulk Actions / Filters / Pagination
+
+body.arashtad-admin {
+    .tablenav {
+        color: $arashtad-text-muted;
+
+        .actions {
+            color: $arashtad-text;
+
+            select {
+                min-width: 130px;
+            }
+        }
+
+        .tablenav-pages {
+            color: $arashtad-text-muted;
+
+            a,
+            .current {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 30px;
+                height: 30px;
+                margin-left: 3px;
+                padding: 0 7px;
+                border: 1px solid $arashtad-border;
+                border-radius: $arashtad-radius-small;
+                background: $arashtad-bg-light;
+                color: $arashtad-text;
+                box-sizing: border-box;
+                box-shadow: none;
+                text-decoration: none;
+
+                &:hover {
+                    border-color: $arashtad-primary;
+                    background: $arashtad-bg-hover;
+                    color: $arashtad-primary-light;
+                }
+
+                &:focus,
+                &:active {
+                    border-color: $arashtad-primary;
+                    background: $arashtad-bg-hover;
+                    color: $arashtad-primary-light;
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+
+            .current {
+                border-color: $arashtad-primary-dark;
+                background: $arashtad-primary;
+                color: #07100e;
+            }
+        }
+    }
+
+    #posts-filter {
+        .search-box {
+            input[type="search"] {
+                background: $arashtad-bg-dark;
+            }
+
+            .button {
+                margin-left: 4px;
+            }
+        }
+    }
+}
+
+// Quick Edit
+
+body.arashtad-admin {
+    .inline-edit-row {
+        border: 1px solid $arashtad-border;
+        background: $arashtad-bg-dark;
+        color: $arashtad-text;
+
+        fieldset {
+            color: $arashtad-text;
+        }
+
+        label {
+            span.title {
+                color: $arashtad-text-muted;
+            }
+        }
+
+        .submit {
+            border-top: 1px solid $arashtad-border;
+            background: $arashtad-bg-deep;
+
+            .button {
+                background: $arashtad-bg-light;
+            }
+        }
+
+        .cancel {
+            color: $arashtad-danger;
+
+            &:hover {
+                color: $arashtad-danger-light;
+            }
+        }
+    }
+}
+
+// Editor
+
+body.arashtad-admin {
+    #poststuff {
+        color: $arashtad-text;
+    }
+
+    #title {
+        min-height: auto;
+        border-color: $arashtad-border-light;
+        background: $arashtad-bg-dark;
+        color: $arashtad-white;
+        font-size: 20px;
+
+        &:focus {
+            border-color: $arashtad-primary;
+            outline: none;
+            box-shadow: 0 0 0 1px $arashtad-primary !important;
+        }
+    }
+
+    .wp-editor-container {
+        border-color: $arashtad-border;
+        background: $arashtad-bg-dark;
+    }
+
+    .wp-editor-area {
+        border-color: $arashtad-border;
+        background: $arashtad-bg-dark;
+        color: $arashtad-text;
+    }
+
+    .quicktags-toolbar {
+        border-bottom-color: $arashtad-border;
+        background: $arashtad-bg-light;
+
+        input {
+            background: $arashtad-bg-dark;
+            border-color: $arashtad-border-light;
+            color: $arashtad-text;
+
+            &:hover {
+                border-color: $arashtad-primary;
+            }
+
+            &:focus {
+                border-color: $arashtad-primary;
+                box-shadow: 0 0 0 1px $arashtad-primary !important;
+            }
+        }
+    }
+}
+
+// Publish Box
+
+body.arashtad-admin {
+    #submitdiv {
+        border-color: $arashtad-border;
+        background: $arashtad-bg-light;
+
+        .hndle {
+            background: $arashtad-bg-dark;
+        }
+
+        .misc-pub-section {
+            border-top-color: $arashtad-border;
+            color: $arashtad-text-muted;
+        }
+
+        #publishing-action {
+            .button {
+                background: $arashtad-primary;
+                border-color: $arashtad-primary-dark;
+                color: #07100e;
+
+                &:hover {
+                    background: $arashtad-primary-light;
+                    border-color: $arashtad-primary-light;
+                }
+
+                &:focus {
+                    box-shadow: 0 0 0 1px $arashtad-primary-light !important;
+                }
+
+                &:active {
+                    background: $arashtad-primary-dark;
+                    color: $arashtad-white;
+                }
+            }
+        }
+
+        #delete-action {
+            a {
+                color: $arashtad-danger;
+
+                &:hover {
+                    color: $arashtad-danger-light;
+                }
+            }
+        }
+    }
+}
+
+// Notices
+
+body.arashtad-admin {
+    .notice,
+    .updated,
+    .error {
+        border: 1px solid $arashtad-border;
+        border-left: 3px solid $arashtad-primary;
+        border-radius: $arashtad-radius;
+        background: $arashtad-bg-light;
+        color: $arashtad-text;
+        box-shadow: none;
+
+        p {
+            color: $arashtad-text;
+        }
+    }
+
+    .notice-error,
+    .error {
+        border-left-color: $arashtad-danger;
+    }
+
+    .notice-warning {
+        border-left-color: $arashtad-secondary;
+    }
+
+    .notice-success,
+    .updated {
+        border-left-color: $arashtad-primary;
+    }
+}
+
+// Settings
+
+body.arashtad-settings-page {
+    .form-table {
+        border: 1px solid $arashtad-border;
+        border-collapse: collapse;
+        background: $arashtad-bg-light;
+
+        th,
+        td {
+            padding: 18px;
+            border-bottom: 1px solid $arashtad-border;
+        }
+
+        th {
+            width: 220px;
+            background: $arashtad-bg-dark;
+            color: $arashtad-text;
+            font-weight: 500;
+        }
+
+        td {
+            color: $arashtad-text;
+        }
+
+        tr:last-child {
+            th,
+            td {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    .submit {
+        padding-top: 18px;
+    }
+}
+
+// Shortcode Copy Controls
+
+body.arashtad-admin {
+    .arashtad-shortcode,
+    .arashtad-shortcode-copy {
+        button,
+        .button {
+            background: $arashtad-bg-dark !important;
+            border: 1px solid $arashtad-border-light !important;
+            color: $arashtad-primary !important;
+            box-shadow: none !important;
+            outline: none;
+
+            &:hover {
+                background: $arashtad-bg-hover !important;
+                border-color: $arashtad-primary !important;
+                color: $arashtad-primary-light !important;
+                box-shadow: none !important;
+            }
+
+            &:focus,
+            &:focus-visible {
+                background: $arashtad-bg-hover !important;
+                border-color: $arashtad-primary !important;
+                color: $arashtad-primary-light !important;
+                outline: none !important;
+                box-shadow: 0 0 0 1px $arashtad-primary !important;
+            }
+
+            &:active {
+                background: $arashtad-bg-active !important;
+                border-color: $arashtad-primary-dark !important;
+                color: $arashtad-primary !important;
+                outline: none !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+
+    .form-table {
+        th,
+        td {
+            padding: 2px 14px 5px;
+        }
+    }
+}
+
+// Select2
+
+body.arashtad-admin {
+    .select2-container {
+        .select2-selection--single,
+        .select2-selection--multiple {
+            min-height: 36px;
+            border: 1px solid $arashtad-border-light;
+            border-radius: $arashtad-radius-small;
+            background: $arashtad-bg-dark;
+            color: $arashtad-text;
+            box-shadow: none;
+        }
+
+        .select2-selection__rendered {
+            color: $arashtad-text;
+        }
+
+        &.select2-container--focus,
+        &.select2-container--open {
+            .select2-selection {
+                border-color: $arashtad-primary;
+                box-shadow: 0 0 0 1px $arashtad-primary;
+            }
+        }
+    }
+
+    .select2-dropdown {
+        border-color: $arashtad-border;
+        background: $arashtad-bg-dark;
+        color: $arashtad-text;
+    }
+
+    .select2-results {
+        &__option {
+            background: $arashtad-bg-dark;
+            color: $arashtad-text;
+
+            &--highlighted[aria-selected] {
+                background: $arashtad-primary;
+                color: #07100e;
+            }
+
+            &[aria-selected="true"] {
+                background: $arashtad-bg-active;
+                color: $arashtad-primary-light;
+            }
+        }
+    }
+}
+
+// Arashtad Sections
+
+   body.arashtad-admin {
+    .arashtad-section,
+    .arashtad-panel,
+    .arashtad-box {
+        position: relative;
+        width: 0;
+        max-width: 100%;
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .resources {
+        a {
+            text-decoration: none;
+
+            &:active,
+            &:focus,
+            &:hover {
+                box-shadow: none !important;
+            }
+        }
+    }
+
+    ul {
+        &.subsubsub {
+            li {
+                &.all,
+                &.publish,
+                &.trash {
+                    a {
+                        color: $arashtad-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    #collapse-button {
+        &:focus, 
+        &:hover {
+            background: $arashtad-bg;
+            box-shadow: none;
+        }
+        
+        .collapse-button-label {
+            top: 0;
+        }
+    }
+
+    #adminmenu {
+        a:hover, 
+        li.menu-top:hover, 
+        li.opensub>a.menu-top, 
+        li>a.menu-top:focus {
+            background: $arashtad-bg;
+            box-shadow: none;
+        }
+
+        .awaiting-mod, 
+        .menu-counter, 
+        .update-plugins {
+            background: $arashtad-primary;
+        }
+
+        li.current a.menu-top, 
+        li.wp-has-current-submenu .wp-submenu .wp-submenu-head, 
+        li.wp-has-current-submenu a.wp-has-current-submenu, 
+        .folded #adminmenu li.current.menu-top {
+            background: $arashtad-bg-hover;
+        }
+        
+        .wp-submenu {
+            a:focus, 
+            a:hover, 
+            li.current a:focus, 
+            li.current a:hover, 
+            li.current a:focus, 
+            li.current a:hover {
+                color: $arashtad-text;
+            }
+        }
+
+        a {
+            &.wp-has-current-submenu {
+                &:focus+.wp-submenu a:focus, 
+                &:focus+.wp-submenu a:hover
+                &:focus + .wp-submenu li.current a:hover,
+                &:focus + .wp-submenu li.current a:focus, 
+                &:focus+.wp-submenu li.current a:focus, 
+                &:focus+.wp-submenu li.current a:hover {
+                    color: $arashtad-text;
+                }
+            }
+        }
+
+        .wp-has-current-submenu {
+            .wp-submenu {
+                a {
+                    &:focus,
+                    &:hover {
+                        color: $arashtad-text;
+                    }
+                }
+            }
+
+            &.opensub {
+                .wp-submenu {
+                    a:focus, 
+                    a:hover, 
+                    li.current a:focus, 
+                    li.current a:hover, 
+                    li.current a:focus, 
+                    li.current a:hover {
+                        color: $arashtad-text;
+                    }
+                }
+            }
+        }
+    }
+
+    .postbox {
+        position: relative;
+        transform-origin: center center;
+        overflow: hidden;
+    }
+    
+    .wp-list-table {
+        &::before {
+            content: "";
+            display: block;
+        }
+    }
+}
+
+// Reduced Motion
+
+@media (prefers-reduced-motion: reduce) {
+    body.arashtad-admin {
+        .arashtad-section,
+        .arashtad-panel,
+        .arashtad-box,
+        .postbox,
+        .wp-list-table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 1;
+            animation: none;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+// Responsive
+
+@media screen and (max-width: 980px) {
+    .resources {
+        a {
+            display: block !important;
+            width: 100%;
+            margin: 3px 0 !important;
+            text-decoration: none;
+        }
+    }
+}
+
+@media screen and (max-width: 782px) {
+    body.arashtad-admin {
+        #wpcontent {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        .wrap {
+            > h1 {
+                font-size: 22px;
+            }
+        }
+
+        .postbox {
+            .inside {
+                padding: 14px;
+
+                > .submit,
+                > p.submit {
+                    margin-right: -14px;
+                    margin-bottom: -14px;
+                    margin-left: -14px;
+                    padding-right: 14px;
+                    padding-left: 14px;
+                }
+            }
+        }
+
+        .arashtad-model-type-group {
+            label {
+                span {
+                    padding-right: 7px;
+                    padding-left: 7px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    body.arashtad-settings-page {
+        .form-table,
+        .form-table tbody,
+        .form-table tr,
+        .form-table th,
+        .form-table td {
+            display: block;
+            width: auto;
+            box-sizing: border-box;
+        }
+
+        .form-table {
+            th,
+            td {
+                padding: 12px 14px;
+            }
+        }
+    }
+}
+
+// Custom pages
+
+@mixin arashtad-card-hover {
+  transition: background-color $arashtad-transition, 
+              transform $arashtad-transition,
+              box-shadow $arashtad-transition;
+  
+  &:hover {
+    background-color: $arashtad-bg-hover;
+    transform: translateY(-2px);
+  }
+}
+
+@mixin arashtad-grid-line {
+  background-image: linear-gradient(
+    to right,
+    $grid-line 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+}
+
+@mixin arashtad-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+body {
+    &.arashtad-edit-scene {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        input[type="submit"],
+        input[type="button"],
+        input[type="reset"],
+        button,
+        .button-secondary,
+        .button-primary,
+        .button,
+        .button-large {
+            min-height: auto !important;
+            line-height: 27px !important;
+            padding: 2px 13px !important;
+        }
+
+        #wpwrap {
+            max-height: 100%;
+
+            #adminmenumain {
+                #adminmenuback {
+
+                }
+            }
+            #wpcontent {
+                max-height: 100%;
+
+                #wpadminbar {
+
+                }
+                #wpbody {
+                    max-height: 100%;
+
+                    #wpbody-content {
+                        max-height: 100%;
+                    }
+                }
+            }
+            #wpfooter {
+                display: none;
+            }
+        }
+
+        .button-block {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .vector-inputs {
+            display: table;
+
+            input {
+                display: table-cell;
+            }
+        }
+
+        .table-3-col {
+            .vector-inputs {
+                input {
+                    max-width: 32%;
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .table-3-col {
+                .vector-inputs {
+                    display: flex;
+
+                    input {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+
+        #wpwrap {
+            height: 100%;
+            max-height: 100%;
+
+            #adminmenumain {
+                #adminmenuback {
+                    max-height: 100%;
+                }
+            }
+            #wpcontent {
+                padding-left: 10px;
+                height: 100%;
+                max-height: 100%;
+
+                #wpadminbar {
+
+                }
+                #wpbody {
+                    height: 100%;
+                    max-height: 100%;
+
+                    #wpbody-content {
+                        height: 100%;
+                        max-height: 100%;
+                        padding-bottom: 0;
+                        box-sizing: border-box;
+
+                        #screen-meta {
+                            display: none;
+                        }
+                        #screen-meta-links {
+                            display: none;
+                        }
+                        .wrap {
+                            height: 100%;
+                            max-height: 100%;
+                            margin: 0;
+                            padding: 0;
+                            box-sizing: border-box;
+
+                            > .wp-heading-inline,
+                            > .page-title-action {
+                                display: none;
+                            }
+
+                            .wp-header-end {
+                                margin: 10px 0;
+                            }
+                            .wp-heading-inline {
+
+                            }
+                            .page-title-action {
+
+                            }
+                            #post {
+                                height: 100%;
+                                max-height: 100%;
+
+                                #poststuff {
+                                    height: 100%;
+                                    max-height: 100%;
+
+                                    .postbox {
+                                        margin-bottom: 0 !important;
+                                        border: none;
+                                        background: none;
+                                    }
+                                    .inside {
+                                        margin: 0;
+                                        background: none;
+                                    }
+
+                                    #post-body {
+                                        height: 100%;
+                                        max-height: 100%;
+                                        margin: 0 !important;
+
+                                        #post-body-content {
+                                            height: 100%;
+                                            max-height: 100%;
+                                            
+                                            > #titlediv {
+                                                display: none;
+                                            }
+
+                                            .postbox-header {
+                                                display: none !important;
+                                            }
+                                            #arashtad_panel {
+                                                display: grid;
+                                                grid-template-columns: 1fr 300px;
+                                                grid-template-rows: 100% 100%;
+                                                gap: 0;
+                                                height: 100%;
+                                                max-height: 100%;
+                                                overflow: hidden;
+
+                                                #arashtad_main {
+                                                    position: relative;
+                                                    height: 100%;
+                                                    max-height: 100%;
+
+                                                    #arashtad_3d_loader_preview {
+                                                        height: 95%;
+                                                        margin-bottom: 30px;
+                                                        box-sizing: border-box;
+
+                                                        .inside {
+                                                            height: 100%;
+                                                            max-height: 100%;
+
+                                                            .ar-preview {
+
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                #arashtad_sidebar {
+                                                    position: relative;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    height: 100%;
+                                                    max-height: 100%;
+                                                    background-color: $arashtad-bg-light;
+                                                    overflow: hidden;
+
+                                                    #arashtad_sidebar_top {
+                                                        flex: 0 0 auto;
+                                                        width: 100%;
+                                                        height: 80px;
+                                                        padding: 10px;
+                                                        border-bottom: 1px solid $arashtad-border;
+                                                        box-sizing: border-box;
+
+                                                        .wp-heading-inline {
+                                                            display: none !important;
+                                                        }
+                                                        .page-title-action {
+                                                            display: block;
+                                                            height: 26px;
+                                                            margin-bottom: 5px;
+                                                            text-align: center;
+                                                            line-height: 26px;
+                                                            color: $arashtad-light !important;
+                                                        }
+                                                        #titlediv {
+                                                            #title {
+                                                                height: 30px;
+                                                                font-size: 120%;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    #arashtad_sidebar_middle {
+                                                        flex: 1 1 auto;
+                                                        min-height: 0;
+                                                        display: grid;
+                                                        grid-template-columns: 30px 1fr;
+                                                        grid-template-rows: minmax(0, 1fr);
+                                                        width: 100%;
+                                                        margin-bottom: 30px;
+                                                        box-sizing: border-box;
+                                                        overflow-y: auto;
+                                                        overflow-x: hidden;
+                                                        box-shadow: inset 0 8px 10px -10px $arashtad-dark, inset 0 -8px 10px -10px $arashtad-dark;
+
+                                                        #arashtad_rail {
+                                                            background-color: $arashtad-bg-dark;
+                                                            min-height: 0;
+
+                                                            ul {
+                                                                position: relative;
+                                                                z-index: 1;
+                                                                margin: 10px 0 0;
+                                                                padding: 0;
+                                                                list-style: none;
+                                                                text-align: right;
+
+                                                                li {
+                                                                    width: 28px;
+                                                                    height: 28px;
+                                                                    margin-left: 1px;
+                                                                    border-radius: $arashtad-radius 0 0 $arashtad-radius;
+                                                                    text-align: center;
+                                                                    cursor: pointer;
+
+                                                                    img {
+                                                                        filter: grayscale(1);
+                                                                        max-width: 80%;
+                                                                        max-height: 80%;
+                                                                        padding: 10%;
+                                                                        user-select: none;
+                                                                        user-drag: none;
+                                                                        -webkit-user-drag: none;
+                                                                        user-select: none;
+                                                                        -webkit-user-select: none;
+                                                                        transition: filter .15s ease;
+                                                                    }
+
+                                                                    &.active {
+                                                                        border: 1px solid $arashtad-border;
+                                                                        border-right: 2px solid $arashtad-bg-light;
+                                                                        background-color: $arashtad-bg-light;
+                                                                        cursor: default;
+
+                                                                        img {
+                                                                            filter: none;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+
+                                                        #arashtad_meta_boxes {
+                                                            max-width: 100%;
+                                                            min-height: 0;
+                                                            height: 100%;
+                                                            border-left: 1px solid $arashtad-border;
+                                                            overflow: hidden auto;
+
+                                                            &::-webkit-scrollbar {
+                                                                width: 6px;
+                                                            }
+                                                        
+                                                            &::-webkit-scrollbar-track {
+                                                                background: transparent;
+                                                            }
+                                                        
+                                                            &::-webkit-scrollbar-thumb {
+                                                                background: #4a4a4a;
+                                                                border-radius: 3px;
+                                                            }
+                                                        
+                                                            &::-webkit-scrollbar-thumb:hover {
+                                                                background: #606060;
+                                                            }
+
+                                                            .postbox {
+                                                                display: none;
+
+                                                                &.active {
+                                                                    display: block;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+
+                                                    #arashtad_sidebar_bottom {
+                                                        position: relative;
+                                                        top: -30px;
+                                                        flex: 0 0 auto;
+                                                        width: 100%;
+                                                        min-height: 0;
+                                                        max-height: 60%;
+                                                        box-sizing: border-box;
+                                                        border-top: 1px solid $arashtad-border;
+                                                        overflow: visible;
+
+                                                        #submitdiv {
+                                                            overflow: visible;
+
+                                                            .inside {
+                                                                .submitbox {
+                                                                    #minor-publishing {
+                                                                        position: relative;
+                                                                        height: 0;
+
+                                                                        #minor-publishing-actions {
+                                                                            padding: 0 10px 0;
+                                                                        }
+                                                                        .misc-pub-section {
+                                                                            padding: 1px 10px 3px;
+
+                                                                            &::before {
+                                                                                content: '➤';
+                                                                                font-size: 100%;
+                                                                            }
+
+                                                                            #timestamp {
+                                                                                &::before {
+                                                                                    content: '';
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        &::before {
+                                                                            content: '+';
+                                                                            position: absolute;
+                                                                            top: -24px;
+                                                                            right: 5px;
+                                                                            border: 1px solid $arashtad-border;
+                                                                            border-bottom-color: $arashtad-bg-light;
+                                                                            border-radius: $arashtad-radius $arashtad-radius 0 0;
+                                                                            display: inline-block;
+                                                                            width: 24px;
+                                                                            height: 24px;
+                                                                            background: $arashtad-bg-light;
+                                                                            box-shadow: 0 -3px 4px $arashtad-dark;
+                                                                            text-align: center;
+                                                                            line-height: 24px;
+                                                                            cursor: pointer;
+                                                                        }
+
+                                                                        &.active {
+                                                                            height: auto !important;
+
+                                                                            &::before {
+                                                                                content: '-';
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    #major-publishing-actions {
+                                                                        position: relative;
+                                                                    }
+                                                                    #publishing-action {
+                                                                        .button,
+                                                                        .button-primary,
+                                                                        .button-large {
+                                                                            min-height: auto !important;
+                                                                            line-height: 27px !important;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .form-table {
+                                                        th, td {
+                                                            display: block;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        #postbox-container-1,
+                                        #postbox-container-2,
+                                        .postbox-container {
+                                            display: none !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        &.arashtad-edit-scene {
+            position: relative !important;
+            height: auto !important;
+
+            #arashtad_panel {
+                display: block !important;
+
+                #arashtad_sidebar {
+                    display: block !important;
+                    height: auto !important;
+                    max-height: auto !important;
+                    overflow: auto !important;
+
+                    #arashtad_sidebar_middle {
+                        margin-bottom: 60px !important;
+
+                        #arashtad_rail {
+                            ul {
+                                min-height: 350px !important;
+                            }
+                        }
+                    }
+                    #arashtad_sidebar_bottom {
+                        top: -60px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#message {
+    position: absolute;
+    top: 40px;
+    left: 5vw;
+    z-index: 99;
+    width: 90vw;
+    box-sizing: border-box;
+    box-shadow: 0 0 60px black;
+
+    &.notice,
+    &.notice-info,
+    &.notice-success,
+    &.notice-warning,
+    &.notice-error,
+    &.is-dismissible,
+    &.updated {
+        position: absolute;
+        top: 40px;
+        left: 5vw;
+        z-index: 99;
+        width: 90vw;
+        box-sizing: border-box;
+        box-shadow: 0 0 60px black;
+    }
+
+    p {
+
+    }
+    button {
+        &.notice-dismiss {
+            &:before {
+                color: lighten($arashtad-bg, 15%);
+            }
+            span {
+                &.screen-reader-text {
+        
+                }
+            }
+        }
+    }
+}
